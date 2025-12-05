@@ -7,7 +7,7 @@ Modern, easy-to-maintain website built with Hugo static site generator.
 ### Prerequisites
 
 - Hugo (v0.100.0 or higher) installed on your system
-- Git (optional, for version control)
+- Git (for version control and GitHub Pages deployment)
 
 ### Running the Site Locally
 
@@ -225,18 +225,37 @@ To modify colors, fonts, or layouts, edit:
 
 ## Deployment
 
-### Option 1: Simple FTP/SFTP Upload
+### Option 1: GitHub Pages (Recommended - Automatic!)
+
+**Automatic deployment on every push to master!**
+
+See **`GITHUB_PAGES_DEPLOYMENT.md`** for complete setup instructions.
+
+Quick setup:
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M master
+git remote add origin https://github.com/YOUR-USERNAME/REPO-NAME.git
+git push -u origin master
+```
+
+Enable GitHub Pages in your repository settings → Pages → Source: GitHub Actions
+
+Your site will be live at: `https://YOUR-USERNAME.github.io/REPO-NAME/`
+
+Every time you push to master, GitHub Actions automatically rebuilds and deploys your site!
+
+### Option 2: Manual FTP/SFTP Upload
 
 1. Run `hugo` to build the site
 2. Upload the entire `public/` directory to your web server
 3. Done!
 
-### Option 2: Automated with Git
+### Option 3: Other Platforms
 
-1. Initialize git: `git init`
-2. Add remote: `git remote add origin <your-repo-url>`
-3. Push changes: `git add . && git commit -m "Update" && git push`
-4. Set up GitHub Pages, Netlify, or similar for automatic deployment
+Works with: Netlify, Vercel, CloudFlare Pages, AWS S3, etc.
 
 ## Support
 

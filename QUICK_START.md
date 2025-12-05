@@ -20,13 +20,32 @@ Edit these files to update your site:
 - **Software:** Edit `data/software.yaml`
 - **Content pages:** Edit files in `content/` folder
 
-### 3. Build for Production
+### 3. Deploy to GitHub Pages
 
 ```bash
-hugo
+# Initialize git (first time only)
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M master
+git remote add origin https://github.com/YOUR-USERNAME/REPO-NAME.git
+git push -u origin master
+
+# After setup, just commit and push to deploy
+git add .
+git commit -m "Update team members"
+git push
 ```
 
-Upload the `public/` folder to your web server.
+**Automatic deployment happens in 1-2 minutes!**
+
+See `GITHUB_PAGES_DEPLOYMENT.md` for detailed setup instructions.
+
+Or manually build:
+```bash
+hugo
+# Upload the `public/` folder to your web server
+```
 
 ---
 
