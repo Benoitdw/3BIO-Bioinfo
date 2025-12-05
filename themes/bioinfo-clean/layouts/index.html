@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="intro-section">
+    <h1>Welcome to {{ .Site.Params.lab_name }}</h1>
+    {{ .Content }}
+</div>
+
+<section>
+    <h2>Research Focus</h2>
+    <p>Our lab develops bioinformatic tools using artificial intelligence, machine learning, data analysis, statistical physics, stochastic modelling and quantum chemistry for applications in biology, biotechnology and medicine.</p>
+
+    <h3>Key Research Areas</h3>
+    <ul>
+        <li>Predicting protein mutations' effects on biophysical properties (stability, solubility, binding affinity)</li>
+        <li>DNA ionization potential prediction</li>
+        <li>Epitope prediction for vaccine and antibody design</li>
+        <li>Stochastic modeling of biological systems</li>
+    </ul>
+</section>
+
+<section style="margin-top: 2rem;">
+    <h2>Latest News</h2>
+    {{ range first 3 (where .Site.RegularPages "Section" "news") }}
+    <div class="project">
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <p style="color: #666; font-size: 0.9rem;">{{ .Date.Format "January 2, 2006" }}</p>
+        <p>{{ .Summary }}</p>
+    </div>
+    {{ end }}
+</section>
+{{ end }}

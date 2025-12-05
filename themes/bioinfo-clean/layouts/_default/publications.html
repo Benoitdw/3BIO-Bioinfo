@@ -1,0 +1,62 @@
+{{ define "main" }}
+<h1>Publications</h1>
+
+{{ .Content }}
+
+<div class="publication-list">
+    {{ $pubs := .Site.Data.publications.publications }}
+
+    <!-- Group publications by year -->
+    {{ $pubsByYear := dict }}
+    {{ range $pubs }}
+        {{ $year := string .year }}
+        {{ $existing := index $pubsByYear $year }}
+        {{ if $existing }}
+            {{ $pubsByYear = merge $pubsByYear (dict $year (append $existing .)) }}
+        {{ else }}
+            {{ $pubsByYear = merge $pubsByYear (dict $year (slice .)) }}
+        {{ end }}
+    {{ end }}
+
+    <!-- Sort years in descending order and display -->
+    {{ range $year, $yearPubs := $pubsByYear }}
+        {{ $sortedYears := slice }}
+    {{ end }}
+
+    {{ $years := slice }}
+    {{ range $year, $_ := $pubsByYear }}
+        {{ $years = $years | append (int $year) }}
+    {{ end }}
+
+    {{ range sort $years "value" "desc" }}
+        {{ $year := string . }}
+        {{ $yearPubs := index $pubsByYear $year }}
+
+        <div class="publication-year">{{ $year }}</div>
+
+        {{ range $yearPubs }}
+        <div class="publication">
+            <div class="publication-title">{{ .title }}</div>
+            <div class="publication-authors">{{ .authors }}</div>
+            {{ if or .venue .volume .pages }}
+            <div class="publication-venue">
+                {{ .venue }}{{ if .volume }}, {{ .volume }}{{ end }}{{ if .pages }}, {{ .pages }}{{ end }}.
+            </div>
+            {{ end }}
+            {{ if .abstract }}
+            <p>{{ .abstract }}</p>
+            {{ end }}
+            <div class="publication-links">
+                {{ if .doi }}
+                <a href="https://doi.org/{{ .doi }}" target="_blank">DOI</a>
+                {{ end }}
+                {{ if .pdf }}
+                <a href="{{ .pdf }}" target="_blank">PDF</a>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    {{ end }}
+</div>
+
+{{ end }}

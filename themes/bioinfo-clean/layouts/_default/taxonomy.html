@@ -1,0 +1,17 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+
+<div class="project-list">
+    {{ range .Pages }}
+    <div class="project">
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <p style="color: #666; font-size: 0.9rem;">{{ .Date.Format "January 2, 2006" }}</p>
+        <p>{{ .Summary }}</p>
+        <a href="{{ .Permalink }}">Read more &rarr;</a>
+    </div>
+    {{ end }}
+</div>
+
+{{ end }}

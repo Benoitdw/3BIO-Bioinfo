@@ -1,0 +1,32 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+
+{{ $software := .Site.Data.software.tools }}
+
+{{ if $software }}
+<div class="software-grid">
+    {{ range $software }}
+    <div class="software-item">
+        <h3>{{ .name }}</h3>
+        <p>{{ .description }}</p>
+        <div class="software-links">
+            {{ if .url }}
+            <a href="{{ .url }}" target="_blank">Visit</a>
+            {{ end }}
+            {{ if .documentation }}
+            <a href="{{ .documentation }}" target="_blank">Documentation</a>
+            {{ end }}
+            {{ if .publication_doi }}
+            <a href="https://doi.org/{{ .publication_doi }}" target="_blank">Publication</a>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ else }}
+<p>Software tools information will be available soon.</p>
+{{ end }}
+
+{{ end }}

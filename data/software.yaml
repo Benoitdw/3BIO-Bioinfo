@@ -1,0 +1,16 @@
+# Software Tools
+# To add new software, copy the structure below and fill in the details
+
+tools:
+  - name: "Example Tool"
+    description: "Brief description of what the tool does"
+    url: "https://github.com/yourusername/tool"
+    documentation: "https://tool-docs.example.com"
+    publication_doi: ""
+
+# INSTRUCTIONS FOR ADDING NEW SOFTWARE:
+# 1. Copy the tool block above
+# 2. Fill in name, description, and url
+# 3. Add documentation URL if available
+# 4. Add publication DOI if the tool has been published
+# 5. Save the file - the website will automatically update

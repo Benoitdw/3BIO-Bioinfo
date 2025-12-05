@@ -1,0 +1,11 @@
+name = "BioInfo Clean"
+license = "MIT"
+description = "A clean, minimal theme for academic research labs"
+homepage = "https://github.com/yourusername/bioinfo-clean"
+tags = ["academic", "research", "lab", "minimal", "clean"]
+features = ["responsive", "publications", "team-management"]
+min_version = "0.100.0"
+
+[author]
+  name = "3BIO-BioInfo"
+  homepage = "https://3bio.polytech.ulb.be"

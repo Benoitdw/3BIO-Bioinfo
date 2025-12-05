@@ -1,0 +1,125 @@
+# Team Members
+# To add a new member, copy the structure below and fill in the details
+# To change a role, update the "role" field
+# To update contact info, modify email/phone/office fields
+
+professors:
+  - name: "Marianne ROOMAN"
+    role: "Head of 3BIO-BioInfo, Professor & FNRS Research Director"
+    email: "marianne.rooman@ulb.be"
+    phone: "+32 (0)2 650 20 67"
+    office: "S.UD3.204"
+    bio: ""
+    research_interests: []
+    website: ""
+
+  - name: "Dimitri GILIS"
+    role: "Professor"
+    email: "dimitri.gilis@ulb.be"
+    phone: "+32 (0)2 650 36 15"
+    office: "S.UD3.203"
+    bio: ""
+    research_interests: []
+    website: ""
+
+  - name: "Fabrizio PUCCI"
+    role: "Professor"
+    email: "fabrizio.pucci@ulb.be"
+    phone: "+32 (0)2 650 31 80"
+    office: "S.UD3.202"
+    bio: ""
+    research_interests: []
+    website: ""
+
+postdocs:
+  - name: "Cyril KARAMAOUN"
+    role: "Postdoctoral Researcher"
+    email: "cyril.karamaoun@ulb.be"
+    phone: "+32 (0)2 650 32 15"
+    office: "S.UD3.207a"
+    bio: ""
+    research_interests: []
+    website: ""
+
+phd_students:
+  - name: "François Ancien"
+    role: "PhD Student"
+    email: ""
+    phone: ""
+    office: ""
+    bio: ""
+    research_interests: []
+    website: ""
+
+  - name: "Martin Schwersensky"
+    role: "PhD Student"
+    email: ""
+    phone: ""
+    office: ""
+    bio: ""
+    research_interests: []
+    website: ""
+
+  - name: "Gabriel Cia Beriain"
+    role: "PhD Student"
+    email: ""
+    phone: ""
+    office: ""
+    bio: ""
+    research_interests: []
+    website: ""
+
+  - name: "Wafa Mokhtari"
+    role: "PhD Student"
+    email: ""
+    phone: ""
+    office: ""
+    bio: ""
+    research_interests: []
+    website: ""
+
+  - name: "Dong Li"
+    role: "PhD Student"
+    email: ""
+    phone: ""
+    office: ""
+    bio: ""
+    research_interests: []
+    website: ""
+
+  - name: "Maxime Tixhon"
+    role: "PhD Student"
+    email: ""
+    phone: ""
+    office: ""
+    bio: ""
+    research_interests: []
+    website: ""
+
+  - name: "Matsvei Tsishyn"
+    role: "PhD Student"
+    email: ""
+    phone: ""
+    office: ""
+    bio: ""
+    research_interests: []
+    website: ""
+
+staff:
+  - name: "Jean KWASIGROCH"
+    role: "System Administrator"
+    email: ""
+    phone: ""
+    office: "S.UD3.200a"
+    bio: ""
+    research_interests: []
+    website: ""
+
+  - name: "Fabian TEHEUX"
+    role: "Bioinformatics Consultant & Industrial Collaborator"
+    email: ""
+    phone: ""
+    office: "S.UD3.201"
+    bio: ""
+    research_interests: []
+    website: ""

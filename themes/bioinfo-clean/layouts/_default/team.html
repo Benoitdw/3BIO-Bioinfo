@@ -1,0 +1,96 @@
+{{ define "main" }}
+<h1>Our Team</h1>
+
+{{ .Content }}
+
+{{ $team := .Site.Data.team }}
+
+{{ if $team.professors }}
+<section>
+    <h2>Faculty</h2>
+    <div class="team-grid">
+        {{ range $team.professors }}
+        <div class="team-member">
+            <h3>{{ .name }}</h3>
+            <div class="team-role">{{ .role }}</div>
+            {{ if .bio }}
+            <p>{{ .bio }}</p>
+            {{ end }}
+            <div class="team-contact">
+                {{ if .email }}<div><a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
+                {{ if .phone }}<div>{{ .phone }}</div>{{ end }}
+                {{ if .office }}<div class="team-office">Office: {{ .office }}</div>{{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+
+{{ if $team.postdocs }}
+<section>
+    <h2>Postdoctoral Researchers</h2>
+    <div class="team-grid">
+        {{ range $team.postdocs }}
+        <div class="team-member">
+            <h3>{{ .name }}</h3>
+            <div class="team-role">{{ .role }}</div>
+            {{ if .bio }}
+            <p>{{ .bio }}</p>
+            {{ end }}
+            <div class="team-contact">
+                {{ if .email }}<div><a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
+                {{ if .phone }}<div>{{ .phone }}</div>{{ end }}
+                {{ if .office }}<div class="team-office">Office: {{ .office }}</div>{{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+
+{{ if $team.phd_students }}
+<section>
+    <h2>PhD Students</h2>
+    <div class="team-grid">
+        {{ range $team.phd_students }}
+        <div class="team-member">
+            <h3>{{ .name }}</h3>
+            <div class="team-role">{{ .role }}</div>
+            {{ if .bio }}
+            <p>{{ .bio }}</p>
+            {{ end }}
+            <div class="team-contact">
+                {{ if .email }}<div><a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
+                {{ if .phone }}<div>{{ .phone }}</div>{{ end }}
+                {{ if .office }}<div class="team-office">Office: {{ .office }}</div>{{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+
+{{ if $team.staff }}
+<section>
+    <h2>Staff</h2>
+    <div class="team-grid">
+        {{ range $team.staff }}
+        <div class="team-member">
+            <h3>{{ .name }}</h3>
+            <div class="team-role">{{ .role }}</div>
+            {{ if .bio }}
+            <p>{{ .bio }}</p>
+            {{ end }}
+            <div class="team-contact">
+                {{ if .email }}<div><a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
+                {{ if .phone }}<div>{{ .phone }}</div>{{ end }}
+                {{ if .office }}<div class="team-office">Office: {{ .office }}</div>{{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+
+{{ end }}
