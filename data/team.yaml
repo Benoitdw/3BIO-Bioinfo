@@ -2,6 +2,7 @@
 # To add a new member, copy the structure below and fill in the details
 # To change a role, update the "role" field
 # To update contact info, modify email/phone/office fields
+# To add a photo, place the image in static/images/team/ and set photo: "/images/team/filename.jpg"
 
 professors:
   - name: "Marianne ROOMAN"
@@ -9,6 +10,7 @@ professors:
     email: "marianne.rooman@ulb.be"
     phone: "+32 (0)2 650 20 67"
     office: "S.UD3.204"
+    photo: ""  # Add photo path here, e.g., "/images/team/marianne.jpg"
     bio: ""
     research_interests: []
     website: ""

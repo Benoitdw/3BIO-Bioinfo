@@ -1,30 +1,160 @@
 {{ define "main" }}
+
+<!-- Hero Section -->
 <div class="intro-section">
-    <h1>Welcome to {{ .Site.Params.lab_name }}</h1>
-    {{ .Content }}
+    <h1>{{ .Site.Params.lab_name }}</h1>
+    <p style="font-size: 1.2rem; max-width: 800px;">We develop bioinformatic tools using artificial intelligence, machine learning, data analysis, statistical physics, stochastic modelling and quantum chemistry for applications in biology, biotechnology and medicine.</p>
 </div>
 
+<!-- About Section -->
 <section>
-    <h2>Research Focus</h2>
-    <p>Our lab develops bioinformatic tools using artificial intelligence, machine learning, data analysis, statistical physics, stochastic modelling and quantum chemistry for applications in biology, biotechnology and medicine.</p>
-
-    <h3>Key Research Areas</h3>
-    <ul>
-        <li>Predicting protein mutations' effects on biophysical properties (stability, solubility, binding affinity)</li>
-        <li>DNA ionization potential prediction</li>
-        <li>Epitope prediction for vaccine and antibody design</li>
-        <li>Stochastic modeling of biological systems</li>
-    </ul>
+    <h2>About Us</h2>
+    <p style="font-size: 1.05rem;">We focus on developing bioinformatics tools and computational approaches to address key challenges in biology, biotechnology, and medicine. Integrating balanced theoretical foundations with fundamental biological principles, we strive to translate complex data into meaningful scientific insights.</p>
 </section>
 
-<section style="margin-top: 2rem;">
-    <h2>Latest News</h2>
-    {{ range first 3 (where .Site.RegularPages "Section" "news") }}
-    <div class="project">
-        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        <p style="color: #666; font-size: 0.9rem;">{{ .Date.Format "January 2, 2006" }}</p>
-        <p>{{ .Summary }}</p>
+<!-- Research Areas -->
+<section>
+    <div class="section-header">
+        <h2>Research Areas</h2>
+    </div>
+
+    <div class="research-areas">
+        <div class="research-card">
+            <div class="research-icon">🤖</div>
+            <h3>Artificial Intelligence & Machine Learning</h3>
+            <p>Design neural networks and supervised/unsupervised learning algorithms for biological data analysis.</p>
+            <a href="/research/" class="button">Learn more →</a>
+        </div>
+
+        <div class="research-card">
+            <div class="research-icon">🧬</div>
+            <h3>Biophysics of Mutations</h3>
+            <p>Predicting protein stability, solubility, and binding affinity changes due to mutations using computational methods.</p>
+            <a href="/research/protein-design/" class="button">Learn more →</a>
+        </div>
+
+        <div class="research-card">
+            <div class="research-icon">🧪</div>
+            <h3>DNA Ionisation</h3>
+            <p>Computational studies of ionization potential of nucleic acid bases and their biological implications.</p>
+            <a href="/research/" class="button">Learn more →</a>
+        </div>
+
+        <div class="research-card">
+            <div class="research-icon">💉</div>
+            <h3>Epitope Prediction</h3>
+            <p>Predicting B-cell and T-cell epitopes for rational vaccine design and antibody engineering.</p>
+            <a href="/research/epitope-prediction/" class="button">Learn more →</a>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Preview -->
+<section>
+    <div class="section-header">
+        <h2>Projects</h2>
+        <a href="/research/" class="button button-outline">View all projects</a>
+    </div>
+
+    <div class="project-list" style="grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));">
+        {{ range first 3 (where .Site.RegularPages "Section" "research") }}
+        <div class="project">
+            <div class="project-image">
+                <!-- Placeholder protein structure background -->
+                <svg width="100%" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad{{ .Title | urlize }}" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="400" height="200" fill="url(#grad{{ .Title | urlize }})"/>
+                    <!-- Abstract protein representation -->
+                    <g opacity="0.3">
+                        <circle cx="100" cy="100" r="30" fill="white"/>
+                        <circle cx="180" cy="80" r="25" fill="white"/>
+                        <circle cx="250" cy="120" r="28" fill="white"/>
+                        <circle cx="320" cy="90" r="22" fill="white"/>
+                        <path d="M 100 100 Q 140 90 180 80 T 250 120 T 320 90" stroke="white" stroke-width="4" fill="none"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="project-content">
+                <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                <p>{{ .Summary | truncate 120 }}</p>
+                <div class="project-tags">
+                    <span class="project-tag">Computational</span>
+                    <span class="project-tag">Research</span>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+<!-- Team Preview -->
+<section>
+    <div class="section-header">
+        <h2>Our Team</h2>
+        <a href="/team/" class="button button-outline">View full team</a>
+    </div>
+
+    {{ $team := .Site.Data.team }}
+    {{ if $team.professors }}
+    <div class="team-grid" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
+        {{ range first 4 $team.professors }}
+        <div class="team-member">
+            <div class="team-photo">
+                {{ substr .name 0 1 }}
+            </div>
+            <h3>{{ .name }}</h3>
+            <div class="team-role">{{ .role }}</div>
+        </div>
+        {{ end }}
     </div>
     {{ end }}
 </section>
+
+<!-- Stats Section (Optional) -->
+<section style="margin-top: 4rem;">
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-number">60+</div>
+            <div class="stat-label">Publications</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">{{ len $team.professors }}+{{ len $team.postdocs }}+{{ len $team.phd_students }}</div>
+            <div class="stat-label">Team Members</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Research Areas</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Years of Research</div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest News -->
+{{ $newsPages := where .Site.RegularPages "Section" "news" }}
+{{ if gt (len $newsPages) 0 }}
+<section>
+    <div class="section-header">
+        <h2>Latest News</h2>
+    </div>
+
+    {{ range first 3 $newsPages }}
+    <div class="project" style="margin-bottom: 1.5rem; border-left: 4px solid var(--secondary-color);">
+        <div class="project-content">
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <p style="color: #94a3b8; font-size: 0.9rem;">{{ .Date.Format "January 2, 2006" }}</p>
+            <p>{{ .Summary }}</p>
+        </div>
+    </div>
+    {{ end }}
+</section>
+{{ end }}
+
 {{ end }}

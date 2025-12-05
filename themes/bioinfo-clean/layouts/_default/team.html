@@ -11,15 +11,22 @@
     <div class="team-grid">
         {{ range $team.professors }}
         <div class="team-member">
+            <div class="team-photo">
+                {{ if .photo }}
+                <img src="{{ .photo }}" alt="{{ .name }}">
+                {{ else }}
+                {{ substr .name 0 1 }}
+                {{ end }}
+            </div>
             <h3>{{ .name }}</h3>
             <div class="team-role">{{ .role }}</div>
             {{ if .bio }}
-            <p>{{ .bio }}</p>
+            <p style="text-align: left; margin-top: 1rem;">{{ .bio }}</p>
             {{ end }}
             <div class="team-contact">
-                {{ if .email }}<div><a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
-                {{ if .phone }}<div>{{ .phone }}</div>{{ end }}
-                {{ if .office }}<div class="team-office">Office: {{ .office }}</div>{{ end }}
+                {{ if .email }}<div>✉️ <a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
+                {{ if .phone }}<div>📞 {{ .phone }}</div>{{ end }}
+                {{ if .office }}<div class="team-office">🚪 Office: {{ .office }}</div>{{ end }}
             </div>
         </div>
         {{ end }}
@@ -33,15 +40,22 @@
     <div class="team-grid">
         {{ range $team.postdocs }}
         <div class="team-member">
+            <div class="team-photo">
+                {{ if .photo }}
+                <img src="{{ .photo }}" alt="{{ .name }}">
+                {{ else }}
+                {{ substr .name 0 1 }}
+                {{ end }}
+            </div>
             <h3>{{ .name }}</h3>
             <div class="team-role">{{ .role }}</div>
             {{ if .bio }}
-            <p>{{ .bio }}</p>
+            <p style="text-align: left; margin-top: 1rem;">{{ .bio }}</p>
             {{ end }}
             <div class="team-contact">
-                {{ if .email }}<div><a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
-                {{ if .phone }}<div>{{ .phone }}</div>{{ end }}
-                {{ if .office }}<div class="team-office">Office: {{ .office }}</div>{{ end }}
+                {{ if .email }}<div>✉️ <a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
+                {{ if .phone }}<div>📞 {{ .phone }}</div>{{ end }}
+                {{ if .office }}<div class="team-office">🚪 Office: {{ .office }}</div>{{ end }}
             </div>
         </div>
         {{ end }}
@@ -55,15 +69,22 @@
     <div class="team-grid">
         {{ range $team.phd_students }}
         <div class="team-member">
+            <div class="team-photo">
+                {{ if .photo }}
+                <img src="{{ .photo }}" alt="{{ .name }}">
+                {{ else }}
+                {{ substr .name 0 1 }}
+                {{ end }}
+            </div>
             <h3>{{ .name }}</h3>
             <div class="team-role">{{ .role }}</div>
             {{ if .bio }}
-            <p>{{ .bio }}</p>
+            <p style="text-align: left; margin-top: 1rem;">{{ .bio }}</p>
             {{ end }}
             <div class="team-contact">
-                {{ if .email }}<div><a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
-                {{ if .phone }}<div>{{ .phone }}</div>{{ end }}
-                {{ if .office }}<div class="team-office">Office: {{ .office }}</div>{{ end }}
+                {{ if .email }}<div>✉️ <a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
+                {{ if .phone }}<div>📞 {{ .phone }}</div>{{ end }}
+                {{ if .office }}<div class="team-office">🚪 Office: {{ .office }}</div>{{ end }}
             </div>
         </div>
         {{ end }}
@@ -77,15 +98,22 @@
     <div class="team-grid">
         {{ range $team.staff }}
         <div class="team-member">
+            <div class="team-photo">
+                {{ if .photo }}
+                <img src="{{ .photo }}" alt="{{ .name }}">
+                {{ else }}
+                {{ substr .name 0 1 }}
+                {{ end }}
+            </div>
             <h3>{{ .name }}</h3>
             <div class="team-role">{{ .role }}</div>
             {{ if .bio }}
-            <p>{{ .bio }}</p>
+            <p style="text-align: left; margin-top: 1rem;">{{ .bio }}</p>
             {{ end }}
             <div class="team-contact">
-                {{ if .email }}<div><a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
-                {{ if .phone }}<div>{{ .phone }}</div>{{ end }}
-                {{ if .office }}<div class="team-office">Office: {{ .office }}</div>{{ end }}
+                {{ if .email }}<div>✉️ <a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
+                {{ if .phone }}<div>📞 {{ .phone }}</div>{{ end }}
+                {{ if .office }}<div class="team-office">🚪 Office: {{ .office }}</div>{{ end }}
             </div>
         </div>
         {{ end }}
