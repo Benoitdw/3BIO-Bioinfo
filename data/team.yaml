@@ -17,6 +17,19 @@ professors:
     google_scholar: "https://scholar.google.com/citations?user=czzXwPUAAAAJ&hl=fr"
     orcid: "https://orcid.org/0000-0000-0000-0000"
 
+  - name: "Fabrizio PUCCI"
+    role: "Head of 3BIO-BioInfo, Professor & FNRS Research Director"
+    email: "fabrizio.pucci@ulb.be"
+    phone: "+32 (0)2 650 31 80"
+    office: "S.UD3.202"
+    bio: "ectetur adipiscing elit. Donec pharetra at lectus sit amet imperdiet. Proin sit amet justo eu sapien commodo efficitur eget ac neque. Duis ut leo urna. Sed vulputate mauris quis massa convallis eleifend. Suspendisse sit amet dapibus elit, ac varius felis. Phasellus sed tincidunt lectus, non luctus risus. Suspendisse "
+    research_interests: []
+    photo: "/images/team/fabrizio_pucci.jpg"
+    linkedin: "https://linkedin.com/in/username"
+    google_scholar: "https://scholar.google.com/citations?user=czzXwPUAAAAJ&hl=fr"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+
+
   - name: "Dimitri GILIS"
     role: "Professor"
     email: "dimitri.gilis@ulb.be"
@@ -27,16 +40,6 @@ professors:
     google_scholar: "https://scholar.google.com/citations?user=czzXwPUAAAAJ&hl=fr"
     orcid: "https://orcid.org/0000-0000-0000-0000"
 
-  - name: "Fabrizio PUCCI"
-    role: "Head of 3BIO-BioInfo, Professor & FNRS Research Director"
-    email: "fabrizio.pucci@ulb.be"
-    phone: "+32 (0)2 650 31 80"
-    office: "S.UD3.202"
-    bio: ""
-    research_interests: []
-    linkedin: "https://linkedin.com/in/username"
-    google_scholar: "https://scholar.google.com/citations?user=czzXwPUAAAAJ&hl=fr"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
 
 postdocs:
   - name: "Hugo Talibart"

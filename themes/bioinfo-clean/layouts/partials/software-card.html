@@ -12,7 +12,10 @@
         <img src="{{ strings.TrimPrefix "/" .image | relURL }}" alt="{{ .name }}">
     </div>
     {{ end }}
-    <h3>{{ .name }}</h3>
+    <h3>
+        {{ if .status }}<span class="status-dot status-{{ .status }}" title="{{ .status }}"></span>{{ end }}
+        {{ .name }}
+    </h3>
     <p>{{ .description | truncate 120 }}</p>
     <div class="software-links">
         {{ if .url }}<a href="{{ .url }}" target="_blank" onclick="event.stopPropagation()">Visit</a>{{ end }}

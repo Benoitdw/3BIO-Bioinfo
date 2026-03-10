@@ -1,43 +1,51 @@
 {{ define "main" }}
 
-<!-- Mission -->
-<div class="home-mission">
-    <p>We develop bioinformatic tools using artificial intelligence, machine learning, statistical physics, and quantum chemistry — translating complex biological data into actionable scientific insights.</p>
+<!-- Split Hero -->
+<div class="v2-hero reveal">
+    <div class="v2-text">
+        <h2>Computational Biology &amp; Bioinformatics</h2>
+        <p>We develop bioinformatic tools using AI, machine learning, and statistical physics to translate complex biological data into actionable scientific insights.</p>
+        <div class="v2-pills">
+            <a href="{{ "research/ai-machine-learning/" | relURL }}" class="research-pill">🤖 AI &amp; ML</a>
+            <a href="{{ "research/protein-design/" | relURL }}" class="research-pill">🧬 Biophysics</a>
+            <a href="{{ "research/dna-ionisation/" | relURL }}" class="research-pill">🧪 DNA Ionisation</a>
+            <a href="{{ "research/epitope-prediction/" | relURL }}" class="research-pill">💉 Epitopes</a>
+        </div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap">
+            <a href="{{ "team/" | relURL }}" class="button">Meet the team →</a>
+            <a href="{{ "publications/" | relURL }}" class="button button-outline">Publications →</a>
+        </div>
+    </div>
+    <div class="v2-single-img">
+        <img src="{{ "images/labo.jpg" | relURL }}" alt="3BIO-BioInfo laboratory">
+    </div>
 </div>
 
-<!-- Research Areas -->
-<section class="home-section">
-    <h2 class="home-section-label">Research Areas</h2>
-    <div class="research-pills">
-        <a href="{{ "research/ai-machine-learning/" | relURL }}" class="research-pill">🤖 AI &amp; Machine Learning</a>
-        <a href="{{ "research/protein-design/" | relURL }}" class="research-pill">🧬 Biophysics of Mutations</a>
-        <a href="{{ "research/dna-ionisation/" | relURL }}" class="research-pill">🧪 DNA Ionisation</a>
-        <a href="{{ "research/epitope-prediction/" | relURL }}" class="research-pill">💉 Epitope Prediction</a>
-    </div>
-</section>
-
 <!-- Featured Software -->
-<section class="home-section">
-    <h2 class="home-section-label">Featured Software</h2>
+<section class="home-section" style="text-align:left">
+    <h2 class="home-section-label reveal" style="text-align:left">Featured Software</h2>
     <div class="featured-software">
-        {{ range first 3 .Site.Data.software.tools }}
-        <div class="featured-software-card">
-            <h3>{{ .name }}</h3>
-            {{ if .description }}
-            <p>{{ .description | truncate 120 }}</p>
+        {{ range $i, $tool := first 3 .Site.Data.software.tools }}
+        <div class="featured-software-card reveal" style="transition-delay:{{ mul $i 100 }}ms">
+            <h3>{{ $tool.name }}</h3>
+            {{ if $tool.description }}
+            <p>{{ $tool.description | truncate 120 }}</p>
             {{ end }}
-            {{ if .url }}
-            <a href="{{ .url }}" class="featured-software-link" target="_blank" rel="noopener">Visit →</a>
+            {{ if $tool.url }}
+            <a href="{{ $tool.url }}" class="featured-software-link" target="_blank" rel="noopener">Visit →</a>
             {{ end }}
         </div>
         {{ end }}
     </div>
 </section>
 
-<!-- CTA Strip -->
-<div class="cta-strip">
-    <a href="{{ "team/" | relURL }}" class="button button-outline">Meet the team →</a>
-    <a href="{{ "publications/" | relURL }}" class="button button-outline">View publications →</a>
-</div>
+<script>
+(function () {
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+})();
+</script>
 
 {{ end }}

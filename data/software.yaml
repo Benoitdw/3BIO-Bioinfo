@@ -9,7 +9,8 @@ tools:
     documentation: ""
     publication_doi: ""        # DOI only, e.g. 10.1093/bioinformatics/btp465
     publication_link: ""       # full URL if no DOI
-  
+    status: "online"           # online | maintenance | offline
+
   - name: "HotMuSiC"
     description: "HOTMuSiC is a tool for the computer-aided design of mutant proteins with controlled thermal stability properties. It evaluates the changes in melting temperature of a given protein or peptide under point mutations, on the basis of the experimental or modeled protein structure."
     image: ""                  # e.g. /images/software/popmusic.png
@@ -17,7 +18,8 @@ tools:
     documentation: ""
     publication_doi: ""        # DOI only, e.g. 10.1093/bioinformatics/btp465
     publication_link: ""       # full URL if no DOI
-  
+    status: "online"           # online | maintenance | offline
+
   - name: "SNPMuSiC"
     description: ""
     image: ""                  # e.g. /images/software/popmusic.png
@@ -25,6 +27,7 @@ tools:
     documentation: ""
     publication_doi: ""        # DOI only, e.g. 10.1093/bioinformatics/btp465
     publication_link: ""       # full URL if no DOI
+    status: "online"           # online | maintenance | offline
 
   - name: "BeatMusic"
     description: "The BeAtMuSiC program evaluates the change in binding affinity between proteins (or protein chains) caused by single-site mutations in their sequence."
@@ -32,6 +35,7 @@ tools:
     url: "http://babylone.3bio.ulb.ac.be/beatmusic/"
     documentation: ""
     publication_link: "10.1093/nar/gkt450"       # full URL if no DOI
+    status: "online"           # online | maintenance | offline
     
 # INSTRUCTIONS FOR ADDING NEW SOFTWARE:
 # 1. Copy the tool block above
