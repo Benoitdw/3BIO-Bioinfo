@@ -2,12 +2,37 @@
 # To add new software, copy the structure below and fill in the details
 
 tools:
-  - name: "Example Tool"
-    description: "Brief description of what the tool does"
-    url: "https://github.com/yourusername/tool"
-    documentation: "https://tool-docs.example.com"
-    publication_doi: ""
+  - name: "PoPMuSiC"
+    description: "PoPMuSiC is a tool for the computer-aided design of mutant proteins with controlled thermodynamic stability properties. It evaluates the changes in folding free energy of a given protein or peptide under point mutations, on the basis of the experimental or modeled protein structure."
+    image: ""                  # e.g. /images/software/popmusic.png
+    url: "http://dezyme.com/"
+    documentation: ""
+    publication_doi: ""        # DOI only, e.g. 10.1093/bioinformatics/btp465
+    publication_link: ""       # full URL if no DOI
+  
+  - name: "HotMuSiC"
+    description: "HOTMuSiC is a tool for the computer-aided design of mutant proteins with controlled thermal stability properties. It evaluates the changes in melting temperature of a given protein or peptide under point mutations, on the basis of the experimental or modeled protein structure."
+    image: ""                  # e.g. /images/software/popmusic.png
+    url: "http://dezyme.com/"
+    documentation: ""
+    publication_doi: ""        # DOI only, e.g. 10.1093/bioinformatics/btp465
+    publication_link: ""       # full URL if no DOI
+  
+  - name: "SNPMuSiC"
+    description: ""
+    image: ""                  # e.g. /images/software/popmusic.png
+    url: "http://dezyme.com/"
+    documentation: ""
+    publication_doi: ""        # DOI only, e.g. 10.1093/bioinformatics/btp465
+    publication_link: ""       # full URL if no DOI
 
+  - name: "BeatMusic"
+    description: "The BeAtMuSiC program evaluates the change in binding affinity between proteins (or protein chains) caused by single-site mutations in their sequence."
+    image: ""                  # e.g. /images/software/popmusic.png
+    url: "http://babylone.3bio.ulb.ac.be/beatmusic/"
+    documentation: ""
+    publication_link: "10.1093/nar/gkt450"       # full URL if no DOI
+    
 # INSTRUCTIONS FOR ADDING NEW SOFTWARE:
 # 1. Copy the tool block above
 # 2. Fill in name, description, and url

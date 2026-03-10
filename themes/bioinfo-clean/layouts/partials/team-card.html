@@ -1,0 +1,32 @@
+<div class="team-member"
+    onclick="openMemberModal(this)"
+    data-name="{{ .name }}"
+    data-role="{{ .role }}"
+    data-email="{{ .email }}"
+    data-bio="{{ .bio }}"
+    data-photo="{{ strings.TrimPrefix "/" .photo | relURL }}"
+    data-linkedin="{{ .linkedin }}"
+    data-google-scholar="{{ .google_scholar }}"
+    data-orcid="{{ .orcid }}"
+    data-research-interests="{{ delimit .research_interests "|||" }}"
+    data-github="{{ .github }}">
+    <div class="team-photo">
+        {{ if .photo }}
+        <img src="{{ strings.TrimPrefix "/" .photo | relURL }}" alt="{{ .name }}">
+        {{ else }}
+        {{ substr .name 0 1 }}
+        {{ end }}
+    </div>
+    <h3>{{ .name }}</h3>
+    <div class="team-role">{{ .role }}</div>
+    {{ if .bio }}
+    <p class="team-bio-preview">{{ .bio | truncate 100 }}</p>
+    {{ end }}
+    <div class="team-contact">
+        {{ if .email }}<div>✉️ <a href="mailto:{{ .email }}" onclick="event.stopPropagation()">{{ .email }}</a></div>{{ end }}
+        {{ if .linkedin }}<div><a href="{{ .linkedin }}" target="_blank" onclick="event.stopPropagation()">LinkedIn</a></div>{{ end }}
+        {{ if .google_scholar }}<div><a href="{{ .google_scholar }}" target="_blank" onclick="event.stopPropagation()">Google Scholar</a></div>{{ end }}
+        {{ if .orcid }}<div><a href="{{ .orcid }}" target="_blank" onclick="event.stopPropagation()">ORCID</a></div>{{ end }}
+        {{ if .github }}<div><a href="{{ .github }}" target="_blank" onclick="event.stopPropagation()">GitHub</a></div>{{ end }}
+    </div>
+</div>

@@ -1,8 +1,27 @@
-<header>
-    <div class="header-content">
-        <h1 class="site-title">
-            <a href="{{ "/" | relURL }}">{{ .Site.Params.lab_name }}</a>
-        </h1>
-        <p class="site-subtitle">{{ .Site.Params.description }}</p>
+<header class="site-header">
+    <div class="site-header-content">
+        <div class="site-header-text">
+            <div class="site-header-eyebrow">
+                <div class="site-header-eyebrow-line"></div>
+                <span>{{ .Site.Params.institution }}</span>
+            </div>
+            <h1 class="site-title">
+                <a href="{{ "/" | relURL }}">
+                    3BIO-<em>BioInfo</em><br>Laboratory
+                </a>
+            </h1>
+            <p class="site-subtitle">{{ .Site.Params.description }}</p>
+        </div>
+        <div class="site-header-cards" aria-hidden="true">
+            <div class="site-header-card site-header-card--1">
+                <img src="{{ "images/banner/4.png" | relURL }}" alt="">
+            </div>
+            <div class="site-header-card site-header-card--2">
+                <img src="{{ "images/banner/1.png" | relURL }}" alt="">
+            </div>
+            <div class="site-header-card site-header-card--3">
+                <img src="{{ "images/banner/6.png" | relURL }}" alt="">
+            </div>
+        </div>
     </div>
 </header>

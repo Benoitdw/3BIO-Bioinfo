@@ -1,0 +1,23 @@
+<div class="software-item"
+    onclick="openSoftwareModal(this)"
+    data-name="{{ .name }}"
+    data-description="{{ .description }}"
+    data-image="{{ if .image }}{{ strings.TrimPrefix "/" .image | relURL }}{{ end }}"
+    data-url="{{ .url }}"
+    data-documentation="{{ .documentation }}"
+    data-publication-doi="{{ .publication_doi }}"
+    data-publication-link="{{ .publication_link }}">
+    {{ if .image }}
+    <div class="software-card-image">
+        <img src="{{ strings.TrimPrefix "/" .image | relURL }}" alt="{{ .name }}">
+    </div>
+    {{ end }}
+    <h3>{{ .name }}</h3>
+    <p>{{ .description | truncate 120 }}</p>
+    <div class="software-links">
+        {{ if .url }}<a href="{{ .url }}" target="_blank" onclick="event.stopPropagation()">Visit</a>{{ end }}
+        {{ if .documentation }}<a href="{{ .documentation }}" target="_blank" onclick="event.stopPropagation()">Documentation</a>{{ end }}
+        {{ if .publication_doi }}<a href="https://doi.org/{{ .publication_doi }}" target="_blank" onclick="event.stopPropagation()">Publication</a>{{ end }}
+        {{ if .publication_link }}<a href="{{ .publication_link }}" target="_blank" onclick="event.stopPropagation()">Publication</a>{{ end }}
+    </div>
+</div>

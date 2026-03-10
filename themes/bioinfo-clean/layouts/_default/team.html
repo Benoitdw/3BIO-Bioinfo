@@ -9,27 +9,7 @@
 <section>
     <h2>Faculty</h2>
     <div class="team-grid">
-        {{ range $team.professors }}
-        <div class="team-member">
-            <div class="team-photo">
-                {{ if .photo }}
-                <img src="{{ .photo }}" alt="{{ .name }}">
-                {{ else }}
-                {{ substr .name 0 1 }}
-                {{ end }}
-            </div>
-            <h3>{{ .name }}</h3>
-            <div class="team-role">{{ .role }}</div>
-            {{ if .bio }}
-            <p style="text-align: left; margin-top: 1rem;">{{ .bio }}</p>
-            {{ end }}
-            <div class="team-contact">
-                {{ if .email }}<div>✉️ <a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
-                {{ if .phone }}<div>📞 {{ .phone }}</div>{{ end }}
-                {{ if .office }}<div class="team-office">🚪 Office: {{ .office }}</div>{{ end }}
-            </div>
-        </div>
-        {{ end }}
+        {{ range $team.professors }}{{ partial "team-card.html" . }}{{ end }}
     </div>
 </section>
 {{ end }}
@@ -38,27 +18,7 @@
 <section>
     <h2>Postdoctoral Researchers</h2>
     <div class="team-grid">
-        {{ range $team.postdocs }}
-        <div class="team-member">
-            <div class="team-photo">
-                {{ if .photo }}
-                <img src="{{ .photo }}" alt="{{ .name }}">
-                {{ else }}
-                {{ substr .name 0 1 }}
-                {{ end }}
-            </div>
-            <h3>{{ .name }}</h3>
-            <div class="team-role">{{ .role }}</div>
-            {{ if .bio }}
-            <p style="text-align: left; margin-top: 1rem;">{{ .bio }}</p>
-            {{ end }}
-            <div class="team-contact">
-                {{ if .email }}<div>✉️ <a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
-                {{ if .phone }}<div>📞 {{ .phone }}</div>{{ end }}
-                {{ if .office }}<div class="team-office">🚪 Office: {{ .office }}</div>{{ end }}
-            </div>
-        </div>
-        {{ end }}
+        {{ range $team.postdocs }}{{ partial "team-card.html" . }}{{ end }}
     </div>
 </section>
 {{ end }}
@@ -67,27 +27,7 @@
 <section>
     <h2>PhD Students</h2>
     <div class="team-grid">
-        {{ range $team.phd_students }}
-        <div class="team-member">
-            <div class="team-photo">
-                {{ if .photo }}
-                <img src="{{ .photo }}" alt="{{ .name }}">
-                {{ else }}
-                {{ substr .name 0 1 }}
-                {{ end }}
-            </div>
-            <h3>{{ .name }}</h3>
-            <div class="team-role">{{ .role }}</div>
-            {{ if .bio }}
-            <p style="text-align: left; margin-top: 1rem;">{{ .bio }}</p>
-            {{ end }}
-            <div class="team-contact">
-                {{ if .email }}<div>✉️ <a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
-                {{ if .phone }}<div>📞 {{ .phone }}</div>{{ end }}
-                {{ if .office }}<div class="team-office">🚪 Office: {{ .office }}</div>{{ end }}
-            </div>
-        </div>
-        {{ end }}
+        {{ range $team.phd_students }}{{ partial "team-card.html" . }}{{ end }}
     </div>
 </section>
 {{ end }}
@@ -96,29 +36,100 @@
 <section>
     <h2>Staff</h2>
     <div class="team-grid">
-        {{ range $team.staff }}
-        <div class="team-member">
-            <div class="team-photo">
-                {{ if .photo }}
-                <img src="{{ .photo }}" alt="{{ .name }}">
-                {{ else }}
-                {{ substr .name 0 1 }}
-                {{ end }}
-            </div>
-            <h3>{{ .name }}</h3>
-            <div class="team-role">{{ .role }}</div>
-            {{ if .bio }}
-            <p style="text-align: left; margin-top: 1rem;">{{ .bio }}</p>
-            {{ end }}
-            <div class="team-contact">
-                {{ if .email }}<div>✉️ <a href="mailto:{{ .email }}">{{ .email }}</a></div>{{ end }}
-                {{ if .phone }}<div>📞 {{ .phone }}</div>{{ end }}
-                {{ if .office }}<div class="team-office">🚪 Office: {{ .office }}</div>{{ end }}
-            </div>
-        </div>
-        {{ end }}
+        {{ range $team.staff }}{{ partial "team-card.html" . }}{{ end }}
     </div>
 </section>
 {{ end }}
+
+<!-- Member Modal -->
+<div id="memberModal" class="member-modal-overlay" onclick="closeMemberModal(event)">
+    <div class="member-modal">
+        <button class="member-modal-close" onclick="closeMemberModal()">&times;</button>
+        <div class="member-modal-body">
+            <div class="member-modal-left">
+                <div class="member-modal-photo" id="modalPhoto"></div>
+                <h2 id="modalName"></h2>
+                <div class="member-modal-role" id="modalRole"></div>
+                <div class="member-modal-links" id="modalLinks"></div>
+            </div>
+            <div class="member-modal-right">
+                <div id="modalBio" class="member-modal-bio-section"></div>
+                <div id="modalInterests" class="member-modal-interests-section"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function openMemberModal(card) {
+    const name = card.dataset.name;
+    const role = card.dataset.role;
+    const email = card.dataset.email;
+    const bio = card.dataset.bio;
+    const photo = card.dataset.photo;
+    const linkedin = card.dataset.linkedin;
+    const googleScholar = card.dataset.googleScholar;
+    const orcid = card.dataset.orcid;
+    const interests = card.dataset.researchInterests;
+    const github = card.dataset.github;
+
+    const photoEl = document.getElementById('modalPhoto');
+    if (photo) {
+        photoEl.innerHTML = `<img src="${photo}" alt="${name}">`;
+    } else {
+        photoEl.textContent = name.charAt(0);
+    }
+
+    document.getElementById('modalName').textContent = name;
+    document.getElementById('modalRole').textContent = role;
+
+    let linksHTML = '';
+    if (email) linksHTML += `<a href="mailto:${email}" class="member-link member-link-email">✉️ ${email}</a>`;
+    if (linkedin) linksHTML += `<a href="${linkedin}" target="_blank" class="member-link member-link-social">LinkedIn ↗</a>`;
+    if (googleScholar) linksHTML += `<a href="${googleScholar}" target="_blank" class="member-link member-link-social">Google Scholar ↗</a>`;
+    if (orcid) linksHTML += `<a href="${orcid}" target="_blank" class="member-link member-link-social">ORCID ↗</a>`;
+    if (github) linksHTML += `<a href="${github}" target="_blank" class="member-link member-link-social">GitHub ↗</a>`;
+    document.getElementById('modalLinks').innerHTML = linksHTML;
+
+    const bioSection = document.getElementById('modalBio');
+    if (bio) {
+        bioSection.innerHTML = `<h4>About</h4><p>${bio}</p>`;
+        bioSection.style.display = '';
+    } else {
+        bioSection.style.display = 'none';
+    }
+
+    const interestsSection = document.getElementById('modalInterests');
+    if (interests) {
+        const items = interests.split('|||').filter(i => i.trim());
+        if (items.length > 0) {
+            interestsSection.innerHTML = `<h4>Research Interests</h4><ul>${items.map(i => `<li>${i.trim()}</li>`).join('')}</ul>`;
+            interestsSection.style.display = '';
+        } else {
+            interestsSection.style.display = 'none';
+        }
+    } else {
+        interestsSection.style.display = 'none';
+    }
+
+    const modal = document.getElementById('memberModal');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMemberModal(event) {
+    const modal = document.getElementById('memberModal');
+    if (event && event.target !== modal) return;
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.getElementById('memberModal').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+});
+</script>
 
 {{ end }}

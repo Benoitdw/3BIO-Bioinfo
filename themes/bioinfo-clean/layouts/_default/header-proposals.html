@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Proposals</title>
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <style>
+        body { background: #0f172a; color: white; font-family: 'Inter', sans-serif; margin: 0; padding: 2rem; }
+        .proposals-title { text-align: center; font-size: 1.5rem; color: #94a3b8; margin-bottom: 3rem; letter-spacing: 0.05em; text-transform: uppercase; }
+        .proposals-title span { color: white; font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
+        .proposal { margin-bottom: 5rem; }
+        .proposal-label { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #64748b; margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem; }
+        .proposal-label::after { content: ''; flex: 1; height: 1px; background: #1e293b; }
+        .proposal-name { font-size: 1.1rem; color: #e2e8f0; font-weight: 600; }
+
+        /* ─────────────────────────────────────────────
+           A — SPLIT ASYMMETRIC
+        ───────────────────────────────────────────── */
+        .header-a {
+            height: 340px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        .header-a-left {
+            background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6e 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3rem;
+            z-index: 1;
+            position: relative;
+        }
+        .header-a-left::after {
+            content: '';
+            position: absolute;
+            right: -60px;
+            top: 0;
+            bottom: 0;
+            width: 120px;
+            background: inherit;
+            transform: skewX(-6deg);
+            z-index: 2;
+        }
+        .header-a-right {
+            position: relative;
+            overflow: hidden;
+        }
+        .header-a-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: saturate(0.8) brightness(0.75);
+        }
+        .header-a-right::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, #0d1b3e 0%, transparent 40%);
+            z-index: 1;
+        }
+        .header-a-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(59,130,246,0.2);
+            border: 1px solid rgba(59,130,246,0.4);
+            color: #93c5fd;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.85rem;
+            border-radius: 100px;
+            margin-bottom: 1.25rem;
+            width: fit-content;
+        }
+        .header-a h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+            margin: 0 0 0.75rem;
+            letter-spacing: -0.02em;
+        }
+        .header-a p {
+            color: #93c5fd;
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ─────────────────────────────────────────────
+           B — CINEMATIC FULL-BG
+        ───────────────────────────────────────────── */
+        .header-b {
+            height: 340px;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .header-b-bg {
+            position: absolute;
+            inset: 0;
+        }
+        .header-b-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            filter: brightness(0.35) saturate(0.6);
+        }
+        .header-b-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(13,27,62,0.5) 0%, rgba(13,27,62,0.85) 100%);
+        }
+        .header-b-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(59,130,246,0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59,130,246,0.07) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .header-b-content {
+            position: relative;
+            z-index: 2;
+        }
+        .header-b-line {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            margin: 0 auto 1.5rem;
+            border-radius: 2px;
+        }
+        .header-b h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+            margin: 0 0 0.75rem;
+            letter-spacing: -0.03em;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+        .header-b p {
+            color: rgba(255,255,255,0.75);
+            font-size: 1.1rem;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        /* ─────────────────────────────────────────────
+           C — FILMSTRIP WITH PARALLAX FEEL
+        ───────────────────────────────────────────── */
+        .header-c {
+            height: 340px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #040d1f;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .header-c-strip {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 180px;
+            display: flex;
+            gap: 4px;
+            opacity: 0.55;
+            mask-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+        }
+        .header-c-strip img {
+            flex: 1;
+            object-fit: cover;
+            object-position: center;
+            min-width: 0;
+        }
+        .header-c-content {
+            position: relative;
+            z-index: 2;
+            padding: 2.5rem 3rem;
+        }
+        .header-c-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #60a5fa;
+            margin-bottom: 1rem;
+        }
+        .header-c h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: white;
+            margin: 0 0 0.5rem;
+            letter-spacing: -0.03em;
+        }
+        .header-c p {
+            color: #94a3b8;
+            font-size: 1rem;
+            margin: 0;
+            max-width: 500px;
+        }
+        .header-c-dots {
+            display: flex;
+            gap: 6px;
+            margin-top: 1.5rem;
+        }
+        .header-c-dots span {
+            width: 28px;
+            height: 3px;
+            border-radius: 2px;
+            background: #3b82f6;
+        }
+        .header-c-dots span:nth-child(2) { background: #8b5cf6; width: 12px; opacity: 0.5; }
+        .header-c-dots span:nth-child(3) { background: #06b6d4; width: 12px; opacity: 0.3; }
+
+        /* ─────────────────────────────────────────────
+           D — FROSTED GLASS / DATA ART
+        ───────────────────────────────────────────── */
+        .header-d {
+            height: 340px;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 480px;
+        }
+        .header-d-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            position: relative;
+            z-index: 1;
+        }
+        .header-d-left::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 240px; height: 240px;
+            background: radial-gradient(circle, rgba(139,92,246,0.25) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .header-d-left::after {
+            content: '';
+            position: absolute;
+            bottom: -60px; left: 60px;
+            width: 180px; height: 180px;
+            background: radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .header-d h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            margin: 0 0 0.75rem;
+            letter-spacing: -0.03em;
+            position: relative;
+            z-index: 1;
+        }
+        .header-d-subtitle {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #a78bfa;
+            margin-bottom: 0.75rem;
+            position: relative;
+            z-index: 1;
+        }
+        .header-d p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+            line-height: 1.6;
+        }
+        .header-d-right {
+            position: relative;
+            overflow: hidden;
+        }
+        .header-d-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            mix-blend-mode: luminosity;
+            filter: hue-rotate(200deg) saturate(1.8) brightness(0.6);
+        }
+        .header-d-right::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, #0f172a 0%, transparent 35%),
+                        linear-gradient(135deg, rgba(139,92,246,0.3) 0%, rgba(59,130,246,0.2) 100%);
+            z-index: 1;
+        }
+
+        /* ─────────────────────────────────────────────
+           E — FLOATING CARDS
+        ───────────────────────────────────────────── */
+        .header-e {
+            height: 340px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0a0f2e 0%, #0d1b3e 50%, #071628 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .header-e::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(59,130,246,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139,92,246,0.08) 0%, transparent 50%);
+        }
+        .header-e-content {
+            position: relative;
+            z-index: 2;
+            padding: 3rem;
+            flex: 1;
+        }
+        .header-e-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+        .header-e-eyebrow-line {
+            width: 32px; height: 2px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            border-radius: 1px;
+        }
+        .header-e-eyebrow span {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #60a5fa;
+        }
+        .header-e h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: white;
+            margin: 0 0 0.75rem;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+        .header-e h1 em {
+            font-style: normal;
+            background: linear-gradient(90deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .header-e p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin: 0;
+            max-width: 380px;
+            line-height: 1.65;
+        }
+        .header-e-cards {
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 420px;
+            height: 280px;
+        }
+        .header-e-card {
+            position: absolute;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .header-e-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .header-e-card:nth-child(1) {
+            width: 200px; height: 165px;
+            top: 0; right: 60px;
+            transform: rotate(3deg);
+            z-index: 3;
+        }
+        .header-e-card:nth-child(2) {
+            width: 190px; height: 155px;
+            bottom: 0; left: 30px;
+            transform: rotate(-4deg);
+            z-index: 2;
+            filter: brightness(0.8);
+        }
+        .header-e-card:nth-child(3) {
+            width: 160px; height: 130px;
+            bottom: 20px; right: 0;
+            transform: rotate(2deg);
+            z-index: 1;
+            filter: brightness(0.6);
+        }
+
+        /* shared helper */
+        .select-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            padding: 0.5rem 1.25rem;
+            background: transparent;
+            border: 1px solid #334155;
+            color: #64748b;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            cursor: default;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+
+<div style="max-width:1100px; margin:0 auto;">
+
+    <div class="proposals-title">
+        <span>Header Proposals</span>
+        5 design directions — pick your favourite
+    </div>
+
+    <!-- A -->
+    <div class="proposal">
+        <div class="proposal-label">
+            <span class="proposal-name">A &nbsp;—&nbsp; Split Asymmetric</span>
+        </div>
+        <div class="header-a">
+            <div class="header-a-left">
+                <div class="header-a-badge">ULB · Bioinformatics</div>
+                <h1>3BIO-BioInfo<br>Laboratory</h1>
+                <p>Computational Biology &amp; Bioinformatics<br>Université Libre de Bruxelles</p>
+            </div>
+            <div class="header-a-right">
+                <img src="{{ "images/banner/4.png" | relURL }}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- B -->
+    <div class="proposal">
+        <div class="proposal-label">
+            <span class="proposal-name">B &nbsp;—&nbsp; Cinematic Full Background</span>
+        </div>
+        <div class="header-b">
+            <div class="header-b-bg">
+                <img src="{{ "images/banner/6.png" | relURL }}" alt="">
+            </div>
+            <div class="header-b-grid"></div>
+            <div class="header-b-content">
+                <div class="header-b-line"></div>
+                <h1>3BIO-BioInfo Laboratory</h1>
+                <p>Computational Biology &amp; Bioinformatics · Université Libre de Bruxelles</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- C -->
+    <div class="proposal">
+        <div class="proposal-label">
+            <span class="proposal-name">C &nbsp;—&nbsp; Filmstrip</span>
+        </div>
+        <div class="header-c">
+            <div class="header-c-strip">
+                <img src="{{ "images/banner/1.png" | relURL }}" alt="">
+                <img src="{{ "images/banner/3.png" | relURL }}" alt="">
+                <img src="{{ "images/banner/4.png" | relURL }}" alt="">
+                <img src="{{ "images/banner/6.png" | relURL }}" alt="">
+                <img src="{{ "images/banner/7.png" | relURL }}" alt="">
+            </div>
+            <div class="header-c-content">
+                <div class="header-c-tag">Université Libre de Bruxelles</div>
+                <h1>3BIO-BioInfo Laboratory</h1>
+                <p>Computational Biology &amp; Bioinformatics Research</p>
+                <div class="header-c-dots">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- D -->
+    <div class="proposal">
+        <div class="proposal-label">
+            <span class="proposal-name">D &nbsp;—&nbsp; Data Art (colour-shifted image)</span>
+        </div>
+        <div class="header-d">
+            <div class="header-d-left">
+                <div class="header-d-subtitle">Université Libre de Bruxelles</div>
+                <h1>3BIO-BioInfo<br>Laboratory</h1>
+                <p>Computational Biology &amp; Bioinformatics —<br>AI, Statistical Physics &amp; Quantum Chemistry</p>
+            </div>
+            <div class="header-d-right">
+                <img src="{{ "images/banner/5.png" | relURL }}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- E -->
+    <div class="proposal">
+        <div class="proposal-label">
+            <span class="proposal-name">E &nbsp;—&nbsp; Floating Cards</span>
+        </div>
+        <div class="header-e">
+            <div class="header-e-content">
+                <div class="header-e-eyebrow">
+                    <div class="header-e-eyebrow-line"></div>
+                    <span>Université Libre de Bruxelles</span>
+                </div>
+                <h1>3BIO-<em>BioInfo</em><br>Laboratory</h1>
+                <p>Computational Biology &amp; Bioinformatics — AI, Machine Learning &amp; Structural Biology</p>
+            </div>
+            <div class="header-e-cards">
+                <div class="header-e-card">
+                    <img src="{{ "images/banner/4.png" | relURL }}" alt="">
+                </div>
+                <div class="header-e-card">
+                    <img src="{{ "images/banner/1.png" | relURL }}" alt="">
+                </div>
+                <div class="header-e-card">
+                    <img src="{{ "images/banner/6.png" | relURL }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

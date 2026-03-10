@@ -10,118 +10,108 @@ professors:
     email: "marianne.rooman@ulb.be"
     phone: "+32 (0)2 650 20 67"
     office: "S.UD3.204"
-    photo: ""  # Add photo path here, e.g., "/images/team/marianne.jpg"
-    bio: ""
-    research_interests: []
-    website: ""
+    photo: "/images/team/marianne_rooman.jpg"
+    bio: "ectetur adipiscing elit. Donec pharetra at lectus sit amet imperdiet. Proin sit amet justo eu sapien commodo efficitur eget ac neque. Duis ut leo urna. Sed vulputate mauris quis massa convallis eleifend. Suspendisse sit amet dapibus elit, ac varius felis. Phasellus sed tincidunt lectus, non luctus risus. Suspendisse "
+    research_interests: ["TEST", "vIP"]
+    linkedin: "https://linkedin.com/in/username"
+    google_scholar: "https://scholar.google.com/citations?user=czzXwPUAAAAJ&hl=fr"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
 
   - name: "Dimitri GILIS"
     role: "Professor"
     email: "dimitri.gilis@ulb.be"
-    phone: "+32 (0)2 650 36 15"
-    office: "S.UD3.203"
-    bio: ""
+    photo: "/images/team/dimitri_gilis.jpg"
+    bio: "ectetur adipiscing elit. Donec pharetra at lectus sit amet imperdiet. Proin sit amet justo eu sapien commodo efficitur eget ac neque. Duis ut leo urna. Sed vulputate mauris quis massa convallis eleifend. Suspendisse sit amet dapibus elit, ac varius felis. Phasellus sed tincidunt lectus, non luctus risus. Suspendisse "
     research_interests: []
-    website: ""
+    linkedin: "https://linkedin.com/in/username"
+    google_scholar: "https://scholar.google.com/citations?user=czzXwPUAAAAJ&hl=fr"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
 
   - name: "Fabrizio PUCCI"
-    role: "Professor"
+    role: "Head of 3BIO-BioInfo, Professor & FNRS Research Director"
     email: "fabrizio.pucci@ulb.be"
     phone: "+32 (0)2 650 31 80"
     office: "S.UD3.202"
     bio: ""
     research_interests: []
-    website: ""
+    linkedin: "https://linkedin.com/in/username"
+    google_scholar: "https://scholar.google.com/citations?user=czzXwPUAAAAJ&hl=fr"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
 
 postdocs:
-  - name: "Cyril KARAMAOUN"
+  - name: "Hugo Talibart"
     role: "Postdoctoral Researcher"
-    email: "cyril.karamaoun@ulb.be"
+    email: "hugo.talibart@ulb.be"
     phone: "+32 (0)2 650 32 15"
-    office: "S.UD3.207a"
     bio: ""
     research_interests: []
-    website: ""
-
-phd_students:
-  - name: "François Ancien"
-    role: "PhD Student"
-    email: ""
-    phone: ""
-    office: ""
-    bio: ""
-    research_interests: []
-    website: ""
-
-  - name: "Martin Schwersensky"
-    role: "PhD Student"
-    email: ""
-    phone: ""
-    office: ""
-    bio: ""
-    research_interests: []
-    website: ""
+    linkedin: "https://linkedin.com/in/username"
+    google_scholar: "https://scholar.google.com/citations?user=..."
+    orcid: "https://orcid.org/0000-0000-0000-0000"
 
   - name: "Gabriel Cia Beriain"
-    role: "PhD Student"
-    email: ""
-    phone: ""
-    office: ""
+    role: "Postdoctoral Researcher"
+    email: "gabriel.cia@ulb.be"
     bio: ""
     research_interests: []
-    website: ""
+    linkedin: "https://linkedin.com/in/username"
+    google_scholar: "https://scholar.google.com/citations?user=..."
+    orcid: "https://orcid.org/0000-0000-0000-0000"
 
-  - name: "Wafa Mokhtari"
-    role: "PhD Student"
-    email: ""
-    phone: ""
-    office: ""
-    bio: ""
-    research_interests: []
-    website: ""
-
-  - name: "Dong Li"
-    role: "PhD Student"
-    email: ""
-    phone: ""
-    office: ""
-    bio: ""
-    research_interests: []
-    website: ""
-
-  - name: "Maxime Tixhon"
-    role: "PhD Student"
-    email: ""
-    phone: ""
-    office: ""
-    bio: ""
-    research_interests: []
-    website: ""
-
+phd_students:
   - name: "Matsvei Tsishyn"
     role: "PhD Student"
     email: ""
-    phone: ""
-    office: ""
     bio: ""
     research_interests: []
-    website: ""
+    linkedin: ""
+    orcid: ""
+
+  - name: "Benoît de Witte"
+    role: "PhD Student"
+    email: "benoit.de.witte@ulb.be"
+    bio: ""
+    research_interests: ["Genomics", "Cancer", "vIP"]
+    linkedin: "https://linkedin.com/in/username"
+    orcid: ""
+    github: "be"
+
+  - name: "Debruyne Romain"
+    role: "PhD Student"
+    email: ""
+    bio: ""
+    research_interests: []
+    linkedin: ""
+    orcid: ""
+
+  - name: "Coolen Gregory"
+    role: "PhD Student"
+    email: ""
+    bio: ""
+    research_interests: []
+    linkedin: ""
+    orcid: ""
+
+  - name: "Hermans Pauline"
+    role: "PhD Student"
+    email: "pauline.hermans@ulb.be"
+    bio: ""
+    research_interests: []
+    linkedin: ""
+    orcid: ""
+
+  - name: "Manon Spiridon"
+    role: "PhD Student"
+    email: "spiridon.manon@ulb.be"
+    bio: ""
+    research_interests: []
+    linkedin: ""
+    orcid: ""
 
 staff:
   - name: "Jean KWASIGROCH"
     role: "System Administrator"
-    email: ""
+    email: "jean.marc.kwasigroch@ulb.be"
     phone: ""
-    office: "S.UD3.200a"
     bio: ""
     research_interests: []
-    website: ""
-
-  - name: "Fabian TEHEUX"
-    role: "Bioinformatics Consultant & Industrial Collaborator"
-    email: ""
-    phone: ""
-    office: "S.UD3.201"
-    bio: ""
-    research_interests: []
-    website: ""

@@ -7,26 +7,70 @@
 
 {{ if $software }}
 <div class="software-grid">
-    {{ range $software }}
-    <div class="software-item">
-        <h3>{{ .name }}</h3>
-        <p>{{ .description }}</p>
-        <div class="software-links">
-            {{ if .url }}
-            <a href="{{ .url }}" target="_blank">Visit</a>
-            {{ end }}
-            {{ if .documentation }}
-            <a href="{{ .documentation }}" target="_blank">Documentation</a>
-            {{ end }}
-            {{ if .publication_doi }}
-            <a href="https://doi.org/{{ .publication_doi }}" target="_blank">Publication</a>
-            {{ end }}
-        </div>
-    </div>
-    {{ end }}
+    {{ range $software }}{{ partial "software-card.html" . }}{{ end }}
 </div>
 {{ else }}
 <p>Software tools information will be available soon.</p>
 {{ end }}
+
+<!-- Software Modal -->
+<div id="softwareModal" class="software-modal-overlay" onclick="closeSoftwareModal(event)">
+    <div class="software-modal">
+        <button class="software-modal-close" onclick="closeSoftwareModal()">&times;</button>
+        <div id="softwareModalImage" class="software-modal-image"></div>
+        <div class="software-modal-content">
+            <h2 id="softwareModalName"></h2>
+            <p id="softwareModalDescription" class="software-modal-description"></p>
+            <div id="softwareModalLinks" class="software-modal-links"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+function openSoftwareModal(card) {
+    const name = card.dataset.name;
+    const description = card.dataset.description;
+    const image = card.dataset.image;
+    const url = card.dataset.url;
+    const documentation = card.dataset.documentation;
+    const doi = card.dataset.publicationDoi;
+    const publicationLink = card.dataset.publicationLink;
+
+    const imageEl = document.getElementById('softwareModalImage');
+    if (image) {
+        imageEl.innerHTML = `<img src="${image}" alt="${name}">`;
+        imageEl.style.display = '';
+    } else {
+        imageEl.style.display = 'none';
+    }
+
+    document.getElementById('softwareModalName').textContent = name;
+    document.getElementById('softwareModalDescription').textContent = description;
+
+    let linksHTML = '';
+    if (url) linksHTML += `<a href="${url}" target="_blank" class="software-modal-btn">Visit ↗</a>`;
+    if (documentation) linksHTML += `<a href="${documentation}" target="_blank" class="software-modal-btn">Documentation ↗</a>`;
+    if (doi) linksHTML += `<a href="https://doi.org/${doi}" target="_blank" class="software-modal-btn software-modal-btn-outline">Publication (DOI) ↗</a>`;
+    if (publicationLink) linksHTML += `<a href="${publicationLink}" target="_blank" class="software-modal-btn software-modal-btn-outline">Publication ↗</a>`;
+    document.getElementById('softwareModalLinks').innerHTML = linksHTML;
+
+    document.getElementById('softwareModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeSoftwareModal(event) {
+    const modal = document.getElementById('softwareModal');
+    if (event && event.target !== modal) return;
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.getElementById('softwareModal').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+});
+</script>
 
 {{ end }}
