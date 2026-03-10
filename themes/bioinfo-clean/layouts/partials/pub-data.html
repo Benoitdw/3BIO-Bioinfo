@@ -1,0 +1,5 @@
+<script>
+window.PUB_DATA = {{ .Site.Data.publications.publications | jsonify | safeJS }};
+window.POSTER_DATA = {{ .Site.Data.posters.posters | jsonify | safeJS }};
+window.SITE_BASE_PATH = {{ .Site.BaseURL | relURL | jsonify | safeJS }};
+</script>

@@ -1,9 +1,11 @@
 # Publications
 # To add a new publication, copy the structure below and fill in the details
 # Publications are automatically organized by year
+# The 'key' field is used for citations: [[cite:key]] in bios, {{< cite key="…" >}} in markdown
 
 publications:
-  - title: "Your Publication Title Here"
+  - key: "example2025placeholder"
+    title: "Your Publication Title Here"
     authors: "Author1, Author2, Author3"
     year: 2025
     venue: "Journal Name"
@@ -14,7 +16,8 @@ publications:
     abstract: "Brief abstract of the publication"
 
   # Example from 2024
-  - title: "Example: Computational prediction of protein stability"
+  - key: "smith2024stability"
+    title: "Example: Computational prediction of protein stability"
     authors: "Smith J, Doe J, Rooman M"
     year: 2024
     venue: "Journal of Computational Biology"
@@ -29,4 +32,6 @@ publications:
 # 2. Fill in all fields (leave empty quotes "" if not applicable)
 # 3. Use the exact same indentation
 # 4. The year field must be a number (not in quotes)
-# 5. Save the file - the website will automatically update
+# 5. The key field should be unique (e.g. firstauthorYEARkeyword)
+# 6. Save the file - the website will automatically update
+# 7. Alternatively, edit bibliography/publications.bib and run: python scripts/bib2yaml.py

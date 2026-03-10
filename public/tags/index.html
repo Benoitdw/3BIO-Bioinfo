@@ -6,19 +6,47 @@
     <meta name="description" content="Computational Biology and Bioinformatics Research Lab">
     <title>Tags | 3BIO-BioInfo Laboratory</title>
     <link rel="stylesheet" href="/bioinfo/css/style.css">
+    <script>
+window.PUB_DATA = [{"abstract":"Brief abstract of the publication","authors":"Author1, Author2, Author3","doi":"10.xxxx/xxxxx","key":"example2025placeholder","pages":"Pages","pdf":"","title":"Your Publication Title Here","venue":"Journal Name","volume":"Volume(Issue)","year":2025},{"abstract":"This is an example publication entry showing the format.","authors":"Smith J, Doe J, Rooman M","doi":"10.1089/cmb.2024.example","key":"smith2024stability","pages":"123-145","pdf":"","title":"Example: Computational prediction of protein stability","venue":"Journal of Computational Biology","volume":"31(2)","year":2024}];
+window.POSTER_DATA = [{"authors":"de Witte Benoît, Pucci Fabrizio and Rooman Marianne","event":"Televie 2026","key":"dewitte2026televie","pdf":"/posters/dewitte2026televie.pdf","title":"Linking somatic mutation in cancer to the electronic properties of DNA","year":2026}];
+window.SITE_BASE_PATH = "/bioinfo";
+</script>
+
 </head>
 <body>
-    <header>
-    <div class="header-content">
-        <h1 class="site-title">
-            <a href="/">3BIO-BioInfo</a>
-        </h1>
-        <p class="site-subtitle">Computational Biology and Bioinformatics Research Lab</p>
+    <header class="site-header">
+    <div class="site-header-content">
+        <div class="site-header-text">
+            <div class="site-header-eyebrow">
+                <div class="site-header-eyebrow-line"></div>
+                <span>Université Libre de Bruxelles (ULB)</span>
+            </div>
+            <h1 class="site-title">
+                <a href="/bioinfo/">
+                    3BIO-<em>BioInfo</em><br>Laboratory
+                </a>
+            </h1>
+            <p class="site-subtitle">Computational Biology and Bioinformatics Research Lab</p>
+        </div>
+        <div class="site-header-cards" aria-hidden="true">
+            <div class="site-header-card site-header-card--1">
+                <img src="/bioinfo/images/banner/4.png" alt="">
+            </div>
+            <div class="site-header-card site-header-card--2">
+                <img src="/bioinfo/images/banner/1.png" alt="">
+            </div>
+            <div class="site-header-card site-header-card--3">
+                <img src="/bioinfo/images/banner/6.png" alt="">
+            </div>
+        </div>
     </div>
 </header>
 
     <nav>
-    <ul>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu">
         
         <li><a href="/bioinfo/">Home</a></li>
         
@@ -35,6 +63,16 @@
         <li><a href="/bioinfo/teaching/">Teaching</a></li>
         
     </ul>
+    <script>
+    (function(){
+        const btn = document.querySelector('.nav-toggle');
+        const menu = document.querySelector('.nav-menu');
+        btn.addEventListener('click', function(){
+            const open = menu.classList.toggle('nav-open');
+            btn.setAttribute('aria-expanded', open);
+        });
+    })();
+    </script>
 </nav>
 
 
@@ -72,5 +110,6 @@
     </div>
 </footer>
 
+    <script src="/bioinfo/js/citations.js"></script>
 </body>
 </html>

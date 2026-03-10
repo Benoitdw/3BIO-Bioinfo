@@ -95,6 +95,7 @@ function openMemberModal(card) {
     if (bio) {
         bioSection.innerHTML = `<h4>About</h4><p>${bio}</p>`;
         bioSection.style.display = '';
+        if (window.processCitations) window.processCitations(bioSection);
     } else {
         bioSection.style.display = 'none';
     }

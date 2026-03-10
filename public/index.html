@@ -7,19 +7,47 @@
     <meta name="description" content="Computational Biology and Bioinformatics Research Lab">
     <title>Home | 3BIO-BioInfo Laboratory</title>
     <link rel="stylesheet" href="/bioinfo/css/style.css">
+    <script>
+window.PUB_DATA = [{"abstract":"Brief abstract of the publication","authors":"Author1, Author2, Author3","doi":"10.xxxx/xxxxx","key":"example2025placeholder","pages":"Pages","pdf":"","title":"Your Publication Title Here","venue":"Journal Name","volume":"Volume(Issue)","year":2025},{"abstract":"This is an example publication entry showing the format.","authors":"Smith J, Doe J, Rooman M","doi":"10.1089/cmb.2024.example","key":"smith2024stability","pages":"123-145","pdf":"","title":"Example: Computational prediction of protein stability","venue":"Journal of Computational Biology","volume":"31(2)","year":2024}];
+window.POSTER_DATA = [{"authors":"de Witte Benoît, Pucci Fabrizio and Rooman Marianne","event":"Televie 2026","key":"dewitte2026televie","pdf":"/posters/dewitte2026televie.pdf","title":"Linking somatic mutation in cancer to the electronic properties of DNA","year":2026}];
+window.SITE_BASE_PATH = "/bioinfo";
+</script>
+
 </head>
 <body>
-    <header>
-    <div class="header-content">
-        <h1 class="site-title">
-            <a href="/">3BIO-BioInfo</a>
-        </h1>
-        <p class="site-subtitle">Computational Biology and Bioinformatics Research Lab</p>
+    <header class="site-header">
+    <div class="site-header-content">
+        <div class="site-header-text">
+            <div class="site-header-eyebrow">
+                <div class="site-header-eyebrow-line"></div>
+                <span>Université Libre de Bruxelles (ULB)</span>
+            </div>
+            <h1 class="site-title">
+                <a href="/bioinfo/">
+                    3BIO-<em>BioInfo</em><br>Laboratory
+                </a>
+            </h1>
+            <p class="site-subtitle">Computational Biology and Bioinformatics Research Lab</p>
+        </div>
+        <div class="site-header-cards" aria-hidden="true">
+            <div class="site-header-card site-header-card--1">
+                <img src="/bioinfo/images/banner/4.png" alt="">
+            </div>
+            <div class="site-header-card site-header-card--2">
+                <img src="/bioinfo/images/banner/1.png" alt="">
+            </div>
+            <div class="site-header-card site-header-card--3">
+                <img src="/bioinfo/images/banner/6.png" alt="">
+            </div>
+        </div>
     </div>
 </header>
 
     <nav>
-    <ul>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu">
         
         <li><a href="/bioinfo/">Home</a></li>
         
@@ -36,6 +64,16 @@
         <li><a href="/bioinfo/teaching/">Teaching</a></li>
         
     </ul>
+    <script>
+    (function(){
+        const btn = document.querySelector('.nav-toggle');
+        const menu = document.querySelector('.nav-menu');
+        btn.addEventListener('click', function(){
+            const open = menu.classList.toggle('nav-open');
+            btn.setAttribute('aria-expanded', open);
+        });
+    })();
+    </script>
 </nav>
 
 
@@ -43,223 +81,70 @@
         
 
 
-<div class="intro-section">
-    <h1>3BIO-BioInfo</h1>
-    <p style="font-size: 1.2rem; max-width: 800px;">We develop bioinformatic tools using artificial intelligence, machine learning, data analysis, statistical physics, stochastic modelling and quantum chemistry for applications in biology, biotechnology and medicine.</p>
+<div class="v2-hero reveal">
+    <div class="v2-text">
+        <h2>Computational Biology &amp; Bioinformatics</h2>
+        <p>We develop bioinformatic tools using AI, machine learning, and statistical physics to translate complex biological data into actionable scientific insights.</p>
+        <div class="v2-pills">
+            <a href="/bioinfo/research/ai-machine-learning/" class="research-pill">🤖 AI &amp; ML</a>
+            <a href="/bioinfo/research/protein-design/" class="research-pill">🧬 Biophysics</a>
+            <a href="/bioinfo/research/dna-ionisation/" class="research-pill">🧪 DNA Ionisation</a>
+            <a href="/bioinfo/research/epitope-prediction/" class="research-pill">💉 Epitopes</a>
+        </div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap">
+            <a href="/bioinfo/team/" class="button">Meet the team →</a>
+            <a href="/bioinfo/publications/" class="button button-outline">Publications →</a>
+        </div>
+    </div>
+    <div class="v2-single-img">
+        <img src="/bioinfo/images/labo.jpg" alt="3BIO-BioInfo laboratory">
+    </div>
 </div>
 
 
-<section>
-    <h2>About Us</h2>
-    <p style="font-size: 1.05rem;">We focus on developing bioinformatics tools and computational approaches to address key challenges in biology, biotechnology, and medicine. Integrating balanced theoretical foundations with fundamental biological principles, we strive to translate complex data into meaningful scientific insights.</p>
-</section>
-
-
-<section>
-    <div class="section-header">
-        <h2>Research Areas</h2>
-    </div>
-
-    <div class="research-areas">
-        <div class="research-card">
-            <div class="research-icon">🤖</div>
-            <h3>Artificial Intelligence & Machine Learning</h3>
-            <p>Design neural networks and supervised/unsupervised learning algorithms for biological data analysis.</p>
-            <a href="/research/" class="button">Learn more →</a>
-        </div>
-
-        <div class="research-card">
-            <div class="research-icon">🧬</div>
-            <h3>Biophysics of Mutations</h3>
-            <p>Predicting protein stability, solubility, and binding affinity changes due to mutations using computational methods.</p>
-            <a href="/research/protein-design/" class="button">Learn more →</a>
-        </div>
-
-        <div class="research-card">
-            <div class="research-icon">🧪</div>
-            <h3>DNA Ionisation</h3>
-            <p>Computational studies of ionization potential of nucleic acid bases and their biological implications.</p>
-            <a href="/research/" class="button">Learn more →</a>
-        </div>
-
-        <div class="research-card">
-            <div class="research-icon">💉</div>
-            <h3>Epitope Prediction</h3>
-            <p>Predicting B-cell and T-cell epitopes for rational vaccine design and antibody engineering.</p>
-            <a href="/research/epitope-prediction/" class="button">Learn more →</a>
-        </div>
-    </div>
-</section>
-
-
-<section>
-    <div class="section-header">
-        <h2>Projects</h2>
-        <a href="/research/" class="button button-outline">View all projects</a>
-    </div>
-
-    <div class="project-list" style="grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));">
+<section class="home-section" style="text-align:left">
+    <h2 class="home-section-label reveal" style="text-align:left">Featured Software</h2>
+    <div class="featured-software">
         
-        <div class="project">
-            <div class="project-image">
-                
-                <svg width="100%" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="gradprediction-of-b-cell-epitopes-for-vaccine-design" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <rect width="400" height="200" fill="url(#gradprediction-of-b-cell-epitopes-for-vaccine-design)"/>
-                    
-                    <g opacity="0.3">
-                        <circle cx="100" cy="100" r="30" fill="white"/>
-                        <circle cx="180" cy="80" r="25" fill="white"/>
-                        <circle cx="250" cy="120" r="28" fill="white"/>
-                        <circle cx="320" cy="90" r="22" fill="white"/>
-                        <path d="M 100 100 Q 140 90 180 80 T 250 120 T 320 90" stroke="white" stroke-width="4" fill="none"/>
-                    </g>
-                </svg>
-            </div>
-            <div class="project-content">
-                <h3><a href="https://3bio.polytech.ulb.be/bioinfo/research/epitope-prediction/">Prediction of B-cell Epitopes for Vaccine Design</a></h3>
-                <p>Our lab develops computational methods for predicting B-cell epitopes, which are crucial for rational vaccine design and …</p>
-                <div class="project-tags">
-                    <span class="project-tag">Computational</span>
-                    <span class="project-tag">Research</span>
-                </div>
-            </div>
+        <div class="featured-software-card reveal" style="transition-delay:0ms">
+            <h3>PoPMuSiC</h3>
+            
+            <p>PoPMuSiC is a tool for the computer-aided design of mutant proteins with controlled thermodynamic stability properties. …</p>
+            
+            
+            <a href="http://dezyme.com/" class="featured-software-link" target="_blank" rel="noopener">Visit →</a>
+            
         </div>
         
-        <div class="project">
-            <div class="project-image">
-                
-                <svg width="100%" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="gradprediction-of-disease-causing-variants-in-the-human-genome" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <rect width="400" height="200" fill="url(#gradprediction-of-disease-causing-variants-in-the-human-genome)"/>
-                    
-                    <g opacity="0.3">
-                        <circle cx="100" cy="100" r="30" fill="white"/>
-                        <circle cx="180" cy="80" r="25" fill="white"/>
-                        <circle cx="250" cy="120" r="28" fill="white"/>
-                        <circle cx="320" cy="90" r="22" fill="white"/>
-                        <path d="M 100 100 Q 140 90 180 80 T 250 120 T 320 90" stroke="white" stroke-width="4" fill="none"/>
-                    </g>
-                </svg>
-            </div>
-            <div class="project-content">
-                <h3><a href="https://3bio.polytech.ulb.be/bioinfo/research/disease-variants/">Prediction of Disease-Causing Variants in the Human Genome</a></h3>
-                <p>We develop computational tools to predict the pathogenicity of genetic variants, helping to identify disease-causing …</p>
-                <div class="project-tags">
-                    <span class="project-tag">Computational</span>
-                    <span class="project-tag">Research</span>
-                </div>
-            </div>
+        <div class="featured-software-card reveal" style="transition-delay:100ms">
+            <h3>HotMuSiC</h3>
+            
+            <p>HOTMuSiC is a tool for the computer-aided design of mutant proteins with controlled thermal stability properties. It …</p>
+            
+            
+            <a href="http://dezyme.com/" class="featured-software-link" target="_blank" rel="noopener">Visit →</a>
+            
         </div>
         
-        <div class="project">
-            <div class="project-image">
-                
-                <svg width="100%" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="gradrational-design-of-modified-proteins" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <rect width="400" height="200" fill="url(#gradrational-design-of-modified-proteins)"/>
-                    
-                    <g opacity="0.3">
-                        <circle cx="100" cy="100" r="30" fill="white"/>
-                        <circle cx="180" cy="80" r="25" fill="white"/>
-                        <circle cx="250" cy="120" r="28" fill="white"/>
-                        <circle cx="320" cy="90" r="22" fill="white"/>
-                        <path d="M 100 100 Q 140 90 180 80 T 250 120 T 320 90" stroke="white" stroke-width="4" fill="none"/>
-                    </g>
-                </svg>
-            </div>
-            <div class="project-content">
-                <h3><a href="https://3bio.polytech.ulb.be/bioinfo/research/protein-design/">Rational Design of Modified Proteins</a></h3>
-                <p>Our research focuses on the rational design of proteins with modified properties, utilizing computational methods to …</p>
-                <div class="project-tags">
-                    <span class="project-tag">Computational</span>
-                    <span class="project-tag">Research</span>
-                </div>
-            </div>
+        <div class="featured-software-card reveal" style="transition-delay:200ms">
+            <h3>SNPMuSiC</h3>
+            
+            
+            <a href="http://dezyme.com/" class="featured-software-link" target="_blank" rel="noopener">Visit →</a>
+            
         </div>
         
     </div>
 </section>
 
-
-<section>
-    <div class="section-header">
-        <h2>Our Team</h2>
-        <a href="/team/" class="button button-outline">View full team</a>
-    </div>
-
-    
-    
-    <div class="team-grid" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
-        
-        <div class="team-member">
-            <div class="team-photo">
-                M
-            </div>
-            <h3>Marianne ROOMAN</h3>
-            <div class="team-role">Head of 3BIO-BioInfo, Professor &amp; FNRS Research Director</div>
-        </div>
-        
-        <div class="team-member">
-            <div class="team-photo">
-                D
-            </div>
-            <h3>Dimitri GILIS</h3>
-            <div class="team-role">Professor</div>
-        </div>
-        
-        <div class="team-member">
-            <div class="team-photo">
-                F
-            </div>
-            <h3>Fabrizio PUCCI</h3>
-            <div class="team-role">Professor</div>
-        </div>
-        
-    </div>
-    
-</section>
-
-
-<section style="margin-top: 4rem;">
-    <div class="stats">
-        <div class="stat-card">
-            <div class="stat-number">60+</div>
-            <div class="stat-label">Publications</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">3+1+7</div>
-            <div class="stat-label">Team Members</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">5+</div>
-            <div class="stat-label">Research Areas</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">10+</div>
-            <div class="stat-label">Years of Research</div>
-        </div>
-    </div>
-</section>
-
-
-
-
+<script>
+(function () {
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+})();
+</script>
 
 
     </main>
@@ -285,5 +170,6 @@
     </div>
 </footer>
 
+    <script src="/bioinfo/js/citations.js"></script>
 </body>
 </html>

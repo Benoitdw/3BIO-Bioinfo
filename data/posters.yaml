@@ -1,0 +1,17 @@
+# Posters
+# Use [[poster:key]] in bios or {{< poster key="…" >}} in markdown to embed a poster link.
+# Clicking the link opens a modal with the PDF embedded.
+
+posters:
+  - key: "dewitte2026televie"
+    title: "Linking somatic mutation in cancer to the electronic properties of DNA"
+    authors: "de Witte Benoît, Pucci Fabrizio and Rooman Marianne"
+    year: 2026
+    event: "Televie 2026"
+    pdf: "/posters/dewitte2026televie.pdf"
+
+# INSTRUCTIONS FOR ADDING NEW POSTERS:
+# 1. Copy the poster block above and fill in the fields
+# 2. Place the PDF file in static/posters/ (e.g. static/posters/pucci2024ismb.pdf)
+# 3. The key field must be unique
+# 4. The pdf path should start with /posters/

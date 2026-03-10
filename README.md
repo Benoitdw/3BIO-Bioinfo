@@ -70,19 +70,64 @@ This website is designed to be extremely easy to maintain. All common updates ca
 2. Add a new publication using this template:
 
 ```yaml
-- title: "Your Publication Title"
-  authors: "Author1, Author2, Author3"
+- key: "firstauthorYEARkeyword"        # unique identifier, used for citations
+  title: "Your Publication Title"
+  authors: "Author1 F, Author2 J, Author3 M"
   year: 2025
   venue: "Journal Name"
   volume: "Volume(Issue)"
   pages: "Page numbers"
   doi: "10.xxxx/xxxxx"
-  pdf: "https://link-to-pdf.com"
+  pdf: ""
   abstract: "Brief description of the publication"
 ```
 
 3. Publications are automatically sorted by year (newest first)
 4. Save and rebuild
+
+> **Tip:** The `key` field is used to cite the publication anywhere on the site (see [Citing a Publication](#citing-a-publication) below).
+
+### Adding Posters
+
+**File to edit:** `data/posters.yaml`
+
+1. Open `data/posters.yaml`
+2. Add a new entry:
+
+```yaml
+- key: "firstauthorYEARevent"          # unique identifier, used to reference the poster
+  title: "Poster Title"
+  authors: "Author1 F, Author2 J"
+  year: 2025
+  event: "Conference Name 2025"
+  pdf: "/posters/firstauthorYEARevent.pdf"
+```
+
+3. Place the PDF file in `static/posters/` (e.g. `static/posters/firstauthorYEARevent.pdf`)
+4. Save and rebuild
+
+### Citing a Publication or Poster
+
+You can reference a publication or poster **anywhere on the site** — in team member bios or in any page written in Markdown. A citation appears as a clickable inline link; hovering shows a tooltip with the full reference, and clicking a poster link opens the PDF in a modal.
+
+#### In a team member bio (`data/team.yaml`)
+
+Use the `[[cite:key]]` or `[[poster:key]]` syntax directly in the `bio` field:
+
+```yaml
+- name: "Jane Doe"
+  bio: "Her work on protein folding [[cite:doe2024folding]] was presented [[poster:doe2024ismb]] at ISMB."
+```
+
+#### In a Markdown page
+
+Use the corresponding shortcodes:
+
+```markdown
+We showed {{< cite key="doe2024folding" >}} that...
+
+The poster {{< poster key="doe2024ismb" >}} presented at ISMB...
+```
 
 ### Adding Software Tools
 
@@ -166,7 +211,10 @@ Update site-wide settings like:
 ├── data/                  # Data files (EASY TO EDIT!)
 │   ├── team.yaml         # Team members data
 │   ├── publications.yaml # Publications data
+│   ├── posters.yaml      # Posters data
 │   └── software.yaml     # Software tools data
+├── static/
+│   └── posters/          # Poster PDF files
 ├── themes/
 │   └── bioinfo-clean/    # Custom theme
 └── public/               # Generated site (after running 'hugo')
@@ -201,9 +249,10 @@ Update site-wide settings like:
 ### Task 3: Add This Year's Publications
 
 1. Open `data/publications.yaml`
-2. Add all new publications with `year: 2025`
+2. Add all new publications with `year: 2025` and a unique `key`
 3. They'll automatically appear under a "2025" heading
-4. Save
+4. You can then cite them anywhere with `[[cite:key]]` (in yaml) or `{{< cite key="…" >}}` (in Markdown)
+5. Save
 
 ### Task 4: Change Homepage Text
 

@@ -6,6 +6,7 @@
     <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    {{ partial "pub-data.html" . }}
 </head>
 <body>
     {{ partial "header.html" . }}
@@ -16,5 +17,6 @@
     </main>
 
     {{ partial "footer.html" . }}
+    <script src="{{ "js/citations.js" | relURL }}"></script>
 </body>
 </html>

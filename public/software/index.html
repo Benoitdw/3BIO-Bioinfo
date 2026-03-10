@@ -6,19 +6,47 @@
     <meta name="description" content="Computational Biology and Bioinformatics Research Lab">
     <title>Software | 3BIO-BioInfo Laboratory</title>
     <link rel="stylesheet" href="/bioinfo/css/style.css">
+    <script>
+window.PUB_DATA = [{"abstract":"Brief abstract of the publication","authors":"Author1, Author2, Author3","doi":"10.xxxx/xxxxx","key":"example2025placeholder","pages":"Pages","pdf":"","title":"Your Publication Title Here","venue":"Journal Name","volume":"Volume(Issue)","year":2025},{"abstract":"This is an example publication entry showing the format.","authors":"Smith J, Doe J, Rooman M","doi":"10.1089/cmb.2024.example","key":"smith2024stability","pages":"123-145","pdf":"","title":"Example: Computational prediction of protein stability","venue":"Journal of Computational Biology","volume":"31(2)","year":2024}];
+window.POSTER_DATA = [{"authors":"de Witte Benoît, Pucci Fabrizio and Rooman Marianne","event":"Televie 2026","key":"dewitte2026televie","pdf":"/posters/dewitte2026televie.pdf","title":"Linking somatic mutation in cancer to the electronic properties of DNA","year":2026}];
+window.SITE_BASE_PATH = "/bioinfo";
+</script>
+
 </head>
 <body>
-    <header>
-    <div class="header-content">
-        <h1 class="site-title">
-            <a href="/">3BIO-BioInfo</a>
-        </h1>
-        <p class="site-subtitle">Computational Biology and Bioinformatics Research Lab</p>
+    <header class="site-header">
+    <div class="site-header-content">
+        <div class="site-header-text">
+            <div class="site-header-eyebrow">
+                <div class="site-header-eyebrow-line"></div>
+                <span>Université Libre de Bruxelles (ULB)</span>
+            </div>
+            <h1 class="site-title">
+                <a href="/bioinfo/">
+                    3BIO-<em>BioInfo</em><br>Laboratory
+                </a>
+            </h1>
+            <p class="site-subtitle">Computational Biology and Bioinformatics Research Lab</p>
+        </div>
+        <div class="site-header-cards" aria-hidden="true">
+            <div class="site-header-card site-header-card--1">
+                <img src="/bioinfo/images/banner/4.png" alt="">
+            </div>
+            <div class="site-header-card site-header-card--2">
+                <img src="/bioinfo/images/banner/1.png" alt="">
+            </div>
+            <div class="site-header-card site-header-card--3">
+                <img src="/bioinfo/images/banner/6.png" alt="">
+            </div>
+        </div>
     </div>
 </header>
 
     <nav>
-    <ul>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu">
         
         <li><a href="/bioinfo/">Home</a></li>
         
@@ -35,6 +63,16 @@
         <li><a href="/bioinfo/teaching/">Teaching</a></li>
         
     </ul>
+    <script>
+    (function(){
+        const btn = document.querySelector('.nav-toggle');
+        const menu = document.querySelector('.nav-menu');
+        btn.addEventListener('click', function(){
+            const open = menu.classList.toggle('nav-open');
+            btn.setAttribute('aria-expanded', open);
+        });
+    })();
+    </script>
 </nav>
 
 
@@ -51,23 +89,157 @@
 
 
 <div class="software-grid">
+    <div class="software-item"
+    onclick="openSoftwareModal(this)"
+    data-name="PoPMuSiC"
+    data-description="PoPMuSiC is a tool for the computer-aided design of mutant proteins with controlled thermodynamic stability properties. It evaluates the changes in folding free energy of a given protein or peptide under point mutations, on the basis of the experimental or modeled protein structure."
+    data-image=""
+    data-url="http://dezyme.com/"
+    data-documentation=""
+    data-publication-doi=""
+    data-publication-link="">
     
-    <div class="software-item">
-        <h3>Example Tool</h3>
-        <p>Brief description of what the tool does</p>
-        <div class="software-links">
-            
-            <a href="https://github.com/yourusername/tool" target="_blank">Visit</a>
-            
-            
-            <a href="https://tool-docs.example.com" target="_blank">Documentation</a>
-            
-            
-        </div>
+    <h3>
+        <span class="status-dot status-online" title="online"></span>
+        PoPMuSiC
+    </h3>
+    <p>PoPMuSiC is a tool for the computer-aided design of mutant proteins with controlled thermodynamic stability properties. …</p>
+    <div class="software-links">
+        <a href="http://dezyme.com/" target="_blank" onclick="event.stopPropagation()">Visit</a>
+        
+        
+        
     </div>
+</div>
+<div class="software-item"
+    onclick="openSoftwareModal(this)"
+    data-name="HotMuSiC"
+    data-description="HOTMuSiC is a tool for the computer-aided design of mutant proteins with controlled thermal stability properties. It evaluates the changes in melting temperature of a given protein or peptide under point mutations, on the basis of the experimental or modeled protein structure."
+    data-image=""
+    data-url="http://dezyme.com/"
+    data-documentation=""
+    data-publication-doi=""
+    data-publication-link="">
     
+    <h3>
+        <span class="status-dot status-online" title="online"></span>
+        HotMuSiC
+    </h3>
+    <p>HOTMuSiC is a tool for the computer-aided design of mutant proteins with controlled thermal stability properties. It …</p>
+    <div class="software-links">
+        <a href="http://dezyme.com/" target="_blank" onclick="event.stopPropagation()">Visit</a>
+        
+        
+        
+    </div>
+</div>
+<div class="software-item"
+    onclick="openSoftwareModal(this)"
+    data-name="SNPMuSiC"
+    data-description=""
+    data-image=""
+    data-url="http://dezyme.com/"
+    data-documentation=""
+    data-publication-doi=""
+    data-publication-link="">
+    
+    <h3>
+        <span class="status-dot status-online" title="online"></span>
+        SNPMuSiC
+    </h3>
+    <p></p>
+    <div class="software-links">
+        <a href="http://dezyme.com/" target="_blank" onclick="event.stopPropagation()">Visit</a>
+        
+        
+        
+    </div>
+</div>
+<div class="software-item"
+    onclick="openSoftwareModal(this)"
+    data-name="BeatMusic"
+    data-description="The BeAtMuSiC program evaluates the change in binding affinity between proteins (or protein chains) caused by single-site mutations in their sequence."
+    data-image=""
+    data-url="http://babylone.3bio.ulb.ac.be/beatmusic/"
+    data-documentation=""
+    data-publication-doi=""
+    data-publication-link="10.1093/nar/gkt450">
+    
+    <h3>
+        <span class="status-dot status-online" title="online"></span>
+        BeatMusic
+    </h3>
+    <p>The BeAtMuSiC program evaluates the change in binding affinity between proteins (or protein chains) caused by …</p>
+    <div class="software-links">
+        <a href="http://babylone.3bio.ulb.ac.be/beatmusic/" target="_blank" onclick="event.stopPropagation()">Visit</a>
+        
+        
+        <a href="10.1093/nar/gkt450" target="_blank" onclick="event.stopPropagation()">Publication</a>
+    </div>
 </div>
 
+</div>
+
+
+
+<div id="softwareModal" class="software-modal-overlay" onclick="closeSoftwareModal(event)">
+    <div class="software-modal">
+        <button class="software-modal-close" onclick="closeSoftwareModal()">&times;</button>
+        <div id="softwareModalImage" class="software-modal-image"></div>
+        <div class="software-modal-content">
+            <h2 id="softwareModalName"></h2>
+            <p id="softwareModalDescription" class="software-modal-description"></p>
+            <div id="softwareModalLinks" class="software-modal-links"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+function openSoftwareModal(card) {
+    const name = card.dataset.name;
+    const description = card.dataset.description;
+    const image = card.dataset.image;
+    const url = card.dataset.url;
+    const documentation = card.dataset.documentation;
+    const doi = card.dataset.publicationDoi;
+    const publicationLink = card.dataset.publicationLink;
+
+    const imageEl = document.getElementById('softwareModalImage');
+    if (image) {
+        imageEl.innerHTML = `<img src="${image}" alt="${name}">`;
+        imageEl.style.display = '';
+    } else {
+        imageEl.style.display = 'none';
+    }
+
+    document.getElementById('softwareModalName').textContent = name;
+    document.getElementById('softwareModalDescription').textContent = description;
+
+    let linksHTML = '';
+    if (url) linksHTML += `<a href="${url}" target="_blank" class="software-modal-btn">Visit ↗</a>`;
+    if (documentation) linksHTML += `<a href="${documentation}" target="_blank" class="software-modal-btn">Documentation ↗</a>`;
+    if (doi) linksHTML += `<a href="https://doi.org/${doi}" target="_blank" class="software-modal-btn software-modal-btn-outline">Publication (DOI) ↗</a>`;
+    if (publicationLink) linksHTML += `<a href="${publicationLink}" target="_blank" class="software-modal-btn software-modal-btn-outline">Publication ↗</a>`;
+    document.getElementById('softwareModalLinks').innerHTML = linksHTML;
+
+    document.getElementById('softwareModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeSoftwareModal(event) {
+    const modal = document.getElementById('softwareModal');
+    if (event && event.target !== modal) return;
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.getElementById('softwareModal').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+});
+</script>
 
 
     </main>
@@ -93,5 +265,6 @@
     </div>
 </footer>
 
+    <script src="/bioinfo/js/citations.js"></script>
 </body>
 </html>
