@@ -103,7 +103,7 @@ function openMemberModal(card) {
     if (interests) {
         const items = interests.split('|||').filter(i => i.trim());
         if (items.length > 0) {
-            interestsSection.innerHTML = `<h4>Research Interests</h4><ul>${items.map(i => `<li>${i.trim()}</li>`).join('')}</ul>`;
+            interestsSection.innerHTML = '<h4>Research Interests</h4><ul>' + items.map(i => '<li>' + i.trim() + '</li>').join('') + '</ul>';
             interestsSection.style.display = '';
         } else {
             interestsSection.style.display = 'none';
