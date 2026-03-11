@@ -42,7 +42,7 @@ professors:
 
 
 postdocs:
-  - name: "Hugo Talibart"
+  - name: "Hugo TALIBART"
     role: "Postdoctoral Researcher"
     email: "hugo.talibart@ulb.be"
     phone: "+32 (0)2 650 32 15"
@@ -52,7 +52,7 @@ postdocs:
     google_scholar: "https://scholar.google.com/citations?user=..."
     orcid: "https://orcid.org/0000-0000-0000-0000"
 
-  - name: "Gabriel Cia Beriain"
+  - name: "Gabriel CIA BERIAIN"
     role: "Postdoctoral Researcher"
     email: "gabriel.cia@ulb.be"
     bio: ""
@@ -62,7 +62,7 @@ postdocs:
     orcid: "https://orcid.org/0000-0000-0000-0000"
 
 phd_students:
-  - name: "Matsvei Tsishyn"
+  - name: "Matsvei TSISHYN"
     role: "PhD Student"
     email: ""
     bio: ""
@@ -70,17 +70,17 @@ phd_students:
     linkedin: ""
     orcid: ""
 
-  - name: "Benoît de Witte"
+  - name: "Benoît DE WITTE"
     role: "PhD Student"
     email: "benoit.de.witte@ulb.be"
-    bio: "Working on [[cite:smith2024stability]] and [[poster:dewitte2026televie:Poster Télévie]]"
-    research_interests: ["Genomics", "Cancer", "vIP", Evolution]
+    bio: "Hello, I'm Benoît ! Passionate about computer science and biology since my youngest age, I chose to pursue a career in the dynamic field of bioinformatics. After completing a bachelor's degree in biomedical studies at the University of Namur, I went on to earn a master's degree in Biomedical Data Management at the University of Liège. Following my studies, I directly started working at OncoDNA, a company that provides personalized treatment solutions for cancer patients. After three years in industry, in 2024, I decided to focus on research and embark on a doctoral adventure. \n I'm currently working on the vertical Ionisation Potential (vIP) and just published [[cite:benaroua_alterations_2025:my first article]] on this subject. \n See  [[poster:dewitte2026televie:the poster]] I presented in Televie 2026 conference for resume of this article."
+    research_interests: ["Genomics", "Cancer", "vIP", "Evolution"]
     linkedin: "https://www.linkedin.com/in/beno%C3%AEt-de-witte-05202b170/"
     orcid: ""
     photo: "/images/team/benoit_de_witte.png"
     github: "https://github.com/Benoitdw"
 
-  - name: "Debruyne Romain"
+  - name: "Romain DEBRUYNE"
     role: "PhD Student"
     email: ""
     bio: ""
@@ -88,7 +88,7 @@ phd_students:
     linkedin: ""
     orcid: ""
 
-  - name: "Coolen Gregory"
+  - name: "Gregory COOLEN"
     role: "PhD Student"
     email: ""
     bio: ""
@@ -96,7 +96,15 @@ phd_students:
     linkedin: ""
     orcid: ""
 
-  - name: "Hermans Pauline"
+  - name: "Loïc VAN BELLINGHEN"
+    role: "PhD Student"
+    email: ""
+    bio: ""
+    research_interests: []
+    linkedin: ""
+    orcid: ""
+
+  - name: "Pauline HERMANS"
     role: "PhD Student"
     email: "pauline.hermans@ulb.be"
     bio: ""
@@ -104,7 +112,7 @@ phd_students:
     linkedin: ""
     orcid: ""
 
-  - name: "Manon Spiridon"
+  - name: "Spiridon MANON"
     role: "PhD Student"
     email: "spiridon.manon@ulb.be"
     bio: ""

@@ -27,13 +27,14 @@
    */
   window.processCitations = function (root) {
     root.innerHTML = root.innerHTML.replace(
-      /\[\[cite:([\w-]+)\]\]/g,
-      function (_, key) {
+      /\[\[cite:([\w-]+)(?::([^\]]+))?\]\]/g,
+      function (_, key, customName) {
         var pub = pubIndex[key];
         if (!pub) return '[?' + key + ']';
         var first = pub.authors.split(',')[0].trim();
+        var label = customName || (first + ' et al., ' + pub.year);
         return '<span class="pub-cite" data-key="' + key + '" tabindex="0">'
-          + '[' + first + ' et al., ' + pub.year + ']'
+          + label
           + buildTooltipHTML(pub)
           + '</span>';
       }

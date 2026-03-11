@@ -1,9 +1,15 @@
+{{- $bio := .bio
+    | replaceRE `\[\[cite:([^:\]]+):([^\]]+)\]\]` `<span class="pub-cite" data-key="$1" tabindex="0">$2</span>`
+    | replaceRE `\[\[cite:([^:\]]+)\]\]` `<span class="pub-cite" data-key="$1" tabindex="0">[$1]</span>`
+    | replaceRE `\[\[poster:([^:\]]+):([^\]]+)\]\]` `<span class="poster-cite" data-key="$1" tabindex="0">$2</span>`
+    | replaceRE `\[\[poster:([^:\]]+)\]\]` `<span class="poster-cite" data-key="$1" tabindex="0">[poster]</span>`
+-}}
 <div class="team-member"
     onclick="openMemberModal(this)"
     data-name="{{ .name }}"
     data-role="{{ .role }}"
     data-email="{{ .email }}"
-    data-bio="{{ .bio }}"
+    data-bio="{{ $bio }}"
     data-photo="{{ strings.TrimPrefix "/" .photo | relURL }}"
     data-linkedin="{{ .linkedin }}"
     data-google-scholar="{{ .google_scholar }}"
@@ -20,7 +26,7 @@
     <h3>{{ .name }}</h3>
     <div class="team-role">{{ .role }}</div>
     {{ if .bio }}
-    <p class="team-bio-preview">{{ .bio | truncate 100 }}</p>
+    <p class="team-bio-preview">{{ .bio | replaceRE `\[\[[^\]]*\]\]` `` | truncate 100 }}</p>
     {{ end }}
     <div class="team-contact">
         {{ if .email }}<div>✉️ <a href="mailto:{{ .email }}" onclick="event.stopPropagation()">{{ .email }}</a></div>{{ end }}
