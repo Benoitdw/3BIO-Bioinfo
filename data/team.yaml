@@ -73,12 +73,12 @@ phd_students:
   - name: "Benoît de Witte"
     role: "PhD Student"
     email: "benoit.de.witte@ulb.be"
-    bio: "Working on [[cite:smith2024stability]] and [[poster:dewitte2026televie]]"
-    research_interests: ["Genomics", "Cancer", "vIP"]
-    linkedin: "https://linkedin.com/in/username"
+    bio: "Working on [[cite:smith2024stability]] and [[poster:dewitte2026televie:Poster Télévie]]"
+    research_interests: ["Genomics", "Cancer", "vIP", Evolution]
+    linkedin: "https://www.linkedin.com/in/beno%C3%AEt-de-witte-05202b170/"
     orcid: ""
     photo: "/images/team/benoit_de_witte.png"
-    github: "be"
+    github: "https://github.com/Benoitdw"
 
   - name: "Debruyne Romain"
     role: "PhD Student"

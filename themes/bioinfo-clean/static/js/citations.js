@@ -39,12 +39,22 @@
       }
     );
     root.innerHTML = root.innerHTML.replace(
-      /\[\[poster:([\w-]+)\]\]/g,
-      function (_, key) {
+      /\[\[poster:([\w-]+)(?::([^\]]+))?\]\]/g,
+      function (_, key, customName) {
         var p = posterIndex[key];
         if (!p) return '[?' + key + ']';
+        var label = customName || '[poster: ' + p.title + ']';
         return '<span class="poster-cite" data-key="' + key + '" tabindex="0">'
-          + '[poster: ' + p.title + ']'
+          + label
+          + '</span>';
+      }
+    );
+    root.innerHTML = root.innerHTML.replace(
+      /\[\[pdf:([^\]:]+):([^\]]+)\]\]/g,
+      function (_, pdf, label) {
+        return '<span class="poster-cite" data-pdf="' + pdf + '" data-title="'
+          + label.replace(/"/g, '&quot;') + '" tabindex="0">'
+          + label
           + '</span>';
       }
     );
@@ -72,7 +82,11 @@
       var clone = el.cloneNode(true);
       el.parentNode.replaceChild(clone, el);
       clone.addEventListener('click', function () {
-        openPosterModal(clone.dataset.key);
+        if (clone.dataset.pdf) {
+          openRawPdfModal(clone.dataset.pdf, clone.dataset.title);
+        } else {
+          openPosterModal(clone.dataset.key);
+        }
       });
     });
   };
@@ -112,6 +126,16 @@
     document.body.style.overflow = 'hidden';
   }
 
+  function openRawPdfModal(pdf, title) {
+    var modal = ensurePosterModal();
+    document.getElementById('posterModalTitle').textContent = title;
+    var base = (window.SITE_BASE_PATH || '/').replace(/\/$/, '');
+    var src = pdf.startsWith('/') ? base + pdf : pdf;
+    document.getElementById('posterModalFrame').src = src;
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
   function closePosterModal() {
     var modal = document.getElementById('posterModal');
     if (modal) {
@@ -135,4 +159,6 @@
       processCitations(el);
     });
   });
+
+  window.openRawPdfModal = openRawPdfModal;
 })();

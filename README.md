@@ -108,15 +108,27 @@ This website is designed to be extremely easy to maintain. All common updates ca
 
 ### Citing a Publication or Poster
 
-You can reference a publication or poster **anywhere on the site** — in team member bios or in any page written in Markdown. A citation appears as a clickable inline link; hovering shows a tooltip with the full reference, and clicking a poster link opens the PDF in a modal.
+You can reference a publication, poster, or any PDF **anywhere on the site** — in team member bios or in any page written in Markdown. A citation appears as a clickable inline link; hovering shows a tooltip with the full reference, and clicking a poster/PDF link opens the document in a modal.
+
+#### Syntax reference
+
+| Syntax | Where | YAML required | Result |
+|--------|-------|:-------------:|--------|
+| `[[cite:doe2024folding]]` | bio, Markdown | ✅ `publications.yaml` | `[Doe et al., 2024]` with tooltip |
+| `[[cite:doe2024folding:Mon libellé]]` | bio, Markdown | ✅ `publications.yaml` | `Mon libellé` with tooltip |
+| `[[poster:doe2024ismb]]` | bio, Markdown | ✅ `posters.yaml` | `[poster: <titre>]`, ouvre PDF |
+| `[[poster:doe2024ismb:Mon libellé]]` | bio, Markdown | ✅ `posters.yaml` | `Mon libellé`, ouvre PDF |
+| `[[pdf:/offres/job2026.pdf:Voir l'offre]]` | bio, Markdown | ❌ | `Voir l'offre`, ouvre PDF |
+
+> **`[[pdf:...]]`** permet de lier directement un fichier PDF (ex. offre d'emploi) sans passer par un fichier YAML. Placez le PDF dans `static/` et utilisez le chemin absolu depuis la racine du site.
 
 #### In a team member bio (`data/team.yaml`)
 
-Use the `[[cite:key]]` or `[[poster:key]]` syntax directly in the `bio` field:
+Use the inline syntax directly in the `bio` field:
 
 ```yaml
 - name: "Jane Doe"
-  bio: "Her work on protein folding [[cite:doe2024folding]] was presented [[poster:doe2024ismb]] at ISMB."
+  bio: "Her work on protein folding [[cite:doe2024folding]] was presented [[poster:doe2024ismb:voir le poster]] at ISMB."
 ```
 
 #### In a Markdown page

@@ -1,5 +1,6 @@
 ---
 title: "Opportunities"
+layout: "opportunities"
 ---
 
 ## Our Lab
@@ -21,13 +22,6 @@ We regularly offer opportunities for Master's students, PhD candidates, and post
 
 Check back regularly for current openings, or contact us directly to inquire about opportunities.
 
-### Requirements
-
-- Strong background in computer science, bioinformatics, physics, or related fields
-- Programming skills (Python, R, or similar)
-- Interest in computational biology and biological problems
-- Good communication skills in English
-
 ### How to Apply
 
-Please send your CV and a brief statement of interest to [marianne.rooman@ulb.be](mailto:marianne.rooman@ulb.be).
+Please send your CV and a brief statement of interest to [marianne.rooman@ulb.be](mailto:marianne.rooman@ulb.be) or [fabrizio.pucci@ulb.be](mailto:fabrizio.pucci@ulb.be).

@@ -6,35 +6,16 @@
 <div class="publication-list">
     {{ $pubs := .Site.Data.publications.publications }}
 
-    <!-- Group publications by year -->
-    {{ $pubsByYear := dict }}
-    {{ range $pubs }}
+    <!-- Sort publications by year descending, then group for display -->
+    {{ $sorted := sort $pubs "year" "desc" }}
+    {{ $currentYear := "" }}
+    {{ range $sorted }}
         {{ $year := string .year }}
-        {{ $existing := index $pubsByYear $year }}
-        {{ if $existing }}
-            {{ $pubsByYear = merge $pubsByYear (dict $year (append $existing .)) }}
-        {{ else }}
-            {{ $pubsByYear = merge $pubsByYear (dict $year (slice .)) }}
+        {{ if ne $year $currentYear }}
+            {{ if $currentYear }}</div>{{ end }}
+            <div class="publication-year">{{ $year }}</div>
+            {{ $currentYear = $year }}
         {{ end }}
-    {{ end }}
-
-    <!-- Sort years in descending order and display -->
-    {{ range $year, $yearPubs := $pubsByYear }}
-        {{ $sortedYears := slice }}
-    {{ end }}
-
-    {{ $years := slice }}
-    {{ range $year, $_ := $pubsByYear }}
-        {{ $years = $years | append (int $year) }}
-    {{ end }}
-
-    {{ range sort $years "value" "desc" }}
-        {{ $year := string . }}
-        {{ $yearPubs := index $pubsByYear $year }}
-
-        <div class="publication-year">{{ $year }}</div>
-
-        {{ range $yearPubs }}
         <div class="publication">
             <div class="publication-title">{{ .title }}</div>
             <div class="publication-authors">{{ .authors }}</div>
@@ -48,15 +29,15 @@
             {{ end }}
             <div class="publication-links">
                 {{ if .doi }}
-                <a href="https://doi.org/{{ .doi }}" target="_blank">DOI</a>
+                <a href="https://doi.org/{{ .doi }}" target="_blank">Link</a>
                 {{ end }}
                 {{ if .pdf }}
-                <a href="{{ .pdf }}" target="_blank">PDF</a>
+                <button onclick="window.openRawPdfModal('{{ .pdf }}', '{{ .title }}')">PDF</button>
                 {{ end }}
             </div>
         </div>
-        {{ end }}
     {{ end }}
+    {{ if $currentYear }}</div>{{ end }}
 </div>
 
 {{ end }}
