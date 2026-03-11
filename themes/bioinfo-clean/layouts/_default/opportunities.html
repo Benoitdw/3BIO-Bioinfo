@@ -1,0 +1,14 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+
+{{ $positions := .Site.Data.positions.positions }}
+
+{{ if $positions }}
+<div class="positions-list">
+    {{ range $positions }}{{ partial "position-card.html" . }}{{ end }}
+</div>
+{{ end }}
+
+{{ end }}

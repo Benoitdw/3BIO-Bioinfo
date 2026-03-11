@@ -1,0 +1,11 @@
+<div class="position-card">
+    {{ if .poste }}<span class="position-badge position-badge-{{ .poste | lower }}">{{ .poste }}</span>{{ end }}
+    <h3>{{ .title }}</h3>
+    {{ if .short_description }}<p>{{ .short_description }}</p>{{ end }}
+    {{ if .requirements }}
+    <ul class="position-requirements">
+        {{ range .requirements }}<li>{{ . }}</li>{{ end }}
+    </ul>
+    {{ end }}
+    {{ if .pdf }}<button class="position-pdf-btn" onclick="window.openRawPdfModal('{{ .pdf }}', '{{ .title }}')">View PDF</button>{{ end }}
+</div>
