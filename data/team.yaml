@@ -128,6 +128,23 @@ phd_students:
     linkedin: ""
     orcid: ""
 
+  - name: "MOKHTARI WAFE"
+    role: "PhD Student"
+    email: "wafa.mokhtari@ulb.be"
+    bio: ""
+    research_interests: []
+    linkedin: ""
+    orcid: ""
+
+  - name: "TIXHON Maxime"
+    role: "PhD Student"
+    email: "maxime.tixhon@ulb.be
+    bio: ""
+    research_interests: []
+    linkedin: ""
+    orcid: ""
+
+
 staff:
   - name: "Jean KWASIGROCH"
     role: "System Administrator"
