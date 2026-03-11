@@ -97,8 +97,16 @@ phd_students:
     orcid: ""
 
   - name: "Loïc VAN BELLINGHEN"
+    role: "Assistant & PhD Student"
+    email: "loic.van.bellinghen@ulb.be"
+    bio: ""
+    research_interests: []
+    linkedin: ""
+    orcid: ""
+
+  - name: "Tom KASSA-BELAOUCHAT"
     role: "PhD Student"
-    email: ""
+    email: "tom.kassabelaouchat@ulb.be"
     bio: ""
     research_interests: []
     linkedin: ""
