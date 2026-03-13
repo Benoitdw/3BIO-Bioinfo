@@ -5,17 +5,16 @@
 # To add a photo, place the image in static/images/team/ and set photo: "/images/team/filename.jpg"
 
 professors:
-  - name: "Marianne ROOMAN"
-    role: "Head of 3BIO-BioInfo, Professor & FNRS Research Director"
-    email: "marianne.rooman@ulb.be"
-    phone: "+32 (0)2 650 20 67"
-    office: "S.UD3.204"
-    photo: "/images/team/marianne_rooman.jpg"
+  - name: "Dimitri GILIS"
+    role: "Professor"
+    email: "dimitri.gilis@ulb.be"
+    photo: "/images/team/dimitri_gilis.jpg"
     bio: "ectetur adipiscing elit. Donec pharetra at lectus sit amet imperdiet. Proin sit amet justo eu sapien commodo efficitur eget ac neque. Duis ut leo urna. Sed vulputate mauris quis massa convallis eleifend. Suspendisse sit amet dapibus elit, ac varius felis. Phasellus sed tincidunt lectus, non luctus risus. Suspendisse "
-    research_interests: ["TEST", "vIP"]
+    research_interests: []
     linkedin: "https://linkedin.com/in/username"
     google_scholar: "https://scholar.google.com/citations?user=czzXwPUAAAAJ&hl=fr"
     orcid: "https://orcid.org/0000-0000-0000-0000"
+
 
   - name: "Fabrizio PUCCI"
     role: "Head of 3BIO-BioInfo, Professor & FNRS Research Director"
@@ -29,19 +28,30 @@ professors:
     google_scholar: "https://scholar.google.com/citations?user=czzXwPUAAAAJ&hl=fr"
     orcid: "https://orcid.org/0000-0000-0000-0000"
 
-
-  - name: "Dimitri GILIS"
-    role: "Professor"
-    email: "dimitri.gilis@ulb.be"
-    photo: "/images/team/dimitri_gilis.jpg"
+  - name: "Marianne ROOMAN"
+    role: "Head of 3BIO-BioInfo, Professor & FNRS Research Director"
+    email: "marianne.rooman@ulb.be"
+    phone: "+32 (0)2 650 20 67"
+    office: "S.UD3.204"
+    photo: "/images/team/marianne_rooman.jpg"
     bio: "ectetur adipiscing elit. Donec pharetra at lectus sit amet imperdiet. Proin sit amet justo eu sapien commodo efficitur eget ac neque. Duis ut leo urna. Sed vulputate mauris quis massa convallis eleifend. Suspendisse sit amet dapibus elit, ac varius felis. Phasellus sed tincidunt lectus, non luctus risus. Suspendisse "
-    research_interests: []
+    research_interests: ["TEST", "vIP"]
     linkedin: "https://linkedin.com/in/username"
     google_scholar: "https://scholar.google.com/citations?user=czzXwPUAAAAJ&hl=fr"
     orcid: "https://orcid.org/0000-0000-0000-0000"
 
 
+
 postdocs:
+  - name: "Gabriel CIA BERIAIN"
+    role: "Postdoctoral Researcher"
+    email: "gabriel.cia@ulb.be"
+    bio: ""
+    research_interests: []
+    linkedin: "https://linkedin.com/in/username"
+    google_scholar: "https://scholar.google.com/citations?user=..."
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+
   - name: "Hugo TALIBART"
     role: "Postdoctoral Researcher"
     email: "hugo.talibart@ulb.be"
@@ -52,17 +62,24 @@ postdocs:
     google_scholar: "https://scholar.google.com/citations?user=..."
     orcid: "https://orcid.org/0000-0000-0000-0000"
 
-  - name: "Gabriel CIA BERIAIN"
-    role: "Postdoctoral Researcher"
-    email: "gabriel.cia@ulb.be"
+phd_students:
+  - name: "Spiridon CIUPITU"
+    role: "PhD Student"
+    email: "spiridon.manon@ulb.be"
     bio: ""
     research_interests: []
-    linkedin: "https://linkedin.com/in/username"
-    google_scholar: "https://scholar.google.com/citations?user=..."
-    orcid: "https://orcid.org/0000-0000-0000-0000"
+    linkedin: ""
+    orcid: ""
 
-phd_students:
-  - name: "Matsvei TSISHYN"
+  - name: "Gregory COOLEN"
+    role: "PhD Student"
+    email: ""
+    bio: ""
+    research_interests: []
+    linkedin: ""
+    orcid: ""
+
+  - name: "Romain DEBRUYNE"
     role: "PhD Student"
     email: ""
     bio: ""
@@ -80,15 +97,40 @@ phd_students:
     photo: "/images/team/benoit_de_witte.png"
     github: "https://github.com/Benoitdw"
 
-  - name: "Romain DEBRUYNE"
+  - name: "Pauline HERMANS"
     role: "PhD Student"
-    email: ""
+    email: "pauline.hermans@ulb.be"
     bio: ""
     research_interests: []
     linkedin: ""
     orcid: ""
 
-  - name: "Gregory COOLEN"
+  - name: "Tom KASSA-BELAOUCHAT"
+    role: "PhD Student"
+    email: "tom.kassabelaouchat@ulb.be"
+    bio: ""
+    research_interests: []
+    linkedin: ""
+    orcid: ""
+
+  - name: "Wafa MOKHTARI"
+    role: "PhD Student"
+    email: "wafa.mokhtari@ulb.be"
+    bio: ""
+    research_interests: []
+    linkedin: ""
+    orcid: ""
+
+
+  - name: "Maxime TIXHON"
+    role: "PhD Student"
+    email: "maxime.tixhon@ulb.be"
+    bio: ""
+    research_interests: []
+    linkedin: ""
+    orcid: ""
+
+  - name: "Matsvei TSISHYN"
     role: "PhD Student"
     email: ""
     bio: ""
@@ -103,47 +145,6 @@ phd_students:
     research_interests: []
     linkedin: ""
     orcid: ""
-
-  - name: "Tom KASSA-BELAOUCHAT"
-    role: "PhD Student"
-    email: "tom.kassabelaouchat@ulb.be"
-    bio: ""
-    research_interests: []
-    linkedin: ""
-    orcid: ""
-
-  - name: "Pauline HERMANS"
-    role: "PhD Student"
-    email: "pauline.hermans@ulb.be"
-    bio: ""
-    research_interests: []
-    linkedin: ""
-    orcid: ""
-
-  - name: "Spiridon MANON"
-    role: "PhD Student"
-    email: "spiridon.manon@ulb.be"
-    bio: ""
-    research_interests: []
-    linkedin: ""
-    orcid: ""
-
-  - name: "MOKHTARI WAFE"
-    role: "PhD Student"
-    email: "wafa.mokhtari@ulb.be"
-    bio: ""
-    research_interests: []
-    linkedin: ""
-    orcid: ""
-
-  - name: "TIXHON Maxime"
-    role: "PhD Student"
-    email: "maxime.tixhon@ulb.be
-    bio: ""
-    research_interests: []
-    linkedin: ""
-    orcid: ""
-
 
 staff:
   - name: "Jean KWASIGROCH"
