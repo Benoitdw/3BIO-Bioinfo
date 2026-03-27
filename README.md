@@ -2,6 +2,8 @@
 
 Modern, easy-to-maintain website built with Hugo static site generator.
 
+CECI EST UN TEST
+
 ## Quick Start
 
 ### Prerequisites
