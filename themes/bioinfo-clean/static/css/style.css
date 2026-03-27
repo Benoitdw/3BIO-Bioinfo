@@ -819,6 +819,28 @@ a:hover {
   transform: translateY(-2px);
 }
 
+.publication-abstract {
+  margin: 0.5rem 0;
+}
+
+.publication-abstract summary {
+  cursor: pointer;
+  color: var(--text-light);
+  font-size: 0.875rem;
+  user-select: none;
+}
+
+.publication-abstract summary:hover {
+  color: var(--accent-color);
+}
+
+.publication-abstract p {
+  margin-top: 0.5rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 /* Software Grid */
 .software-grid {
   display: grid;

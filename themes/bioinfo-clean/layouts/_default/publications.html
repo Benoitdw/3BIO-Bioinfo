@@ -25,7 +25,10 @@
             </div>
             {{ end }}
             {{ if .abstract }}
-            <p>{{ .abstract }}</p>
+            <details class="publication-abstract">
+                <summary>Abstract</summary>
+                <p>{{ .abstract }}</p>
+            </details>
             {{ end }}
             <div class="publication-links">
                 {{ if .doi }}
