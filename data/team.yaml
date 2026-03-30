@@ -55,12 +55,12 @@ postdocs:
   - name: "Hugo TALIBART"
     role: "Postdoctoral Researcher"
     email: "hugo.talibart@ulb.be"
-    phone: "+32 (0)2 650 32 15"
-    bio: ""
-    research_interests: []
-    linkedin: "https://linkedin.com/in/username"
-    google_scholar: "https://scholar.google.com/citations?user=..."
-    orcid: "https://orcid.org/0000-0000-0000-0000"
+    bio: "Hello, I'm Hugo! I am a passionate computer scientist with an engineering background in applied mathematics and theoretical computer science. I discovered bioinformatics during my PhD at INRIA Rennes, where I found that algorithmic approaches could be applied to fascinating biological questions. My first research project was on protein sequence alignment with coevolution information, combining statistical sequence modeling and Integer Linear Programming (ILP), work I continued during a postdoc at the National Museum of Natural History in Paris. In 2023, I joined the 3BIO-Bioinfo team as a postdoctoral researcher to embark on their newly launched project on AI-driven drug design for olfactory receptors. In this project, I developed <a href=\"https://github.com/3BioCompBio/chembed\">chembed</a>, a Transformer-based variational autoencoder with a chemistry-aware latent space for molecular representation and generation. I am also currently working on a framework for rigorous, bias-controlled benchmarking of drug-target interaction prediction methods based on an ILP formulation, with the goal of systematically evaluating AI-based approaches under realistic conditions that prevent models from exploiting dataset biases."
+    research_interests: ["Combinatorial optimization", "Statistical sequence modeling", "Formal language theory", "Integer linear programming", "Machine learning", "Generative models", "Proteins", "Coevolution", "Drug design"]
+    linkedin: "https://be.linkedin.com/in/hugo-talibart-369190a7/"
+    google_scholar: "https://scholar.google.com/citations?user=pFjaOZsAAAAJ"
+    orcid: "https://orcid.org/0000-0003-3062-8432"
+    photo: "/images/team/hugo_talibart.png"
 
 phd_students:
   - name: "Spiridon CIUPITU"
