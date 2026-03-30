@@ -46,10 +46,11 @@ postdocs:
   - name: "Gabriel CIA BERIAIN"
     role: "Postdoctoral Researcher"
     email: "gabriel.cia@ulb.be"
-    bio: ""
+    bio: "Antibody design"
+    photo: "/images/team/gabriel_cia.png"
     research_interests: []
-    linkedin: "https://linkedin.com/in/username"
-    google_scholar: "https://scholar.google.com/citations?user=..."
+    linkedin: "https://www.linkedin.com/in/gabriel-cia-decombis-136392139/"
+    google_scholar: "https://scholar.google.com/citations?user=Yee9USAAAAAJ&hl=fr"
     orcid: "https://orcid.org/0000-0000-0000-0000"
 
   - name: "Hugo TALIBART"
