@@ -153,4 +153,4 @@ staff:
     email: "jean.marc.kwasigroch@ulb.be"
     phone: ""
     bio: ""
-    research_interests: []
+    research_interests: [test]
