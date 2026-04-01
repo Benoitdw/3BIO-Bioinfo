@@ -74,9 +74,9 @@ phd_students:
 
   - name: "Gregory COOLEN"
     role: "PhD Student"
-    email: ""
-    bio: ""
-    research_interests: []
+    email: "gregory.coolen@ulb.be"
+    bio: "Hi, I'm Greg :) I come from a purely computer science background and transitioned to bioinformatics. I've been focusing on attention in protein language models since the beginning of my thesis. My goal is to uncover the biophysical properties pLMs learn, specifically studying thermostability. I love open software, climbing and my cats."
+    research_interests: ["Algorithmics & optimization", "Attention models",  "Thermostability", "Structural bioinformatics", "Low-level programming"]
     linkedin: ""
     orcid: ""
 
