@@ -113,6 +113,7 @@ phd_students:
     research_interests: []
     linkedin: "https://www.linkedin.com/in/tom-kassa-b44278192/"
     orcid: ""
+    photo: "/images/team/tom_kassa.jpeg"
 
   - name: "Wafa MOKHTARI"
     role: "PhD Student"
