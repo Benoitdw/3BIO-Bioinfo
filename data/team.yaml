@@ -106,13 +106,14 @@ phd_students:
     linkedin: ""
     orcid: ""
 
-  - name: "Tom KASSA-BELAOUCHAT"
+  - name: "Tom KASSA"
     role: "PhD Student"
     email: "tom.kassabelaouchat@ulb.be"
-    bio: ""
+    bio: "Computational Biology and Cancer Immunology."
     research_interests: []
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/tom-kassa-b44278192/"
     orcid: ""
+    photo: "/images/team/tom_kassa.jpeg"
 
   - name: "Wafa MOKHTARI"
     role: "PhD Student"
