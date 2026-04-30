@@ -118,10 +118,40 @@ phd_students:
   - name: "Wafa MOKHTARI"
     role: "PhD Student"
     email: "wafa.mokhtari@ulb.be"
-    bio: ""
-    research_interests: []
-    linkedin: ""
+    bio: "Veterinarian with a Master's in Microbial Biotechnology, currently pursuing
+    a PhD in Bioinformatics focused on food allergies. Passionate about
+    advancing food safety through research and innovation, applying a One
+    Health perspective that bridges human and animal health. Experienced in
+    agri-food sciences and bioinformatics, contributing to projects on food
+    allergen prediction and risk assessment. Developed and evaluated
+    computational tools for allergenicity prediction with direct applications
+    in public health."
+    research_interests: ["Computational allergenicity prediction", "Food safety and risk assessment"]
+    linkedin: "https://www.linkedin.com/in/wafa-mokhtari-alg/"
     orcid: ""
+    funding:
+    - project: "WAL'PROT"
+      role: "PhD researcher"
+      funder: "Wallonie-Bruxelles International (WBI), Walloon Region, and the European Regional Development Fund (ERDF/FEDER)"
+      grant: "Grant portfolio WAL'PROT No. 55, project WAL'PROT_6_ULB_digital tools No. 618"
+      url: "http://babylone.ulb.ac.be/faddatabase/FEDER.html"
+    - publications:
+    - title: >
+        In Silico Cholinesterase and Monoamine Oxidase Inhibitory Activities
+        of Perillaldehyde and D-Limonene, Main Compounds of Essential Oil of
+        Algerian Ammodaucus leucotrichus
+      journal: "American Journal of Biochemistry and Biotechnology"
+      year: 2019
+      doi: "10.3844/ajbsp.2019.42.45"
+      url: "https://doi.org/10.3844/ajbsp.2019.42.45"
+    - title: >
+        Diversity of Culturable Halophilic Archaea and Bacteria from Chott
+        Tinsilt and El Malah Salt-Lake in Algeria
+      journal: "American Journal of Biochemistry and Biotechnology"
+      year: 2019
+      doi: "10.3844/ajbsp.2019.46.54"
+      url: "https://doi.org/10.3844/ajbsp.2019.46.54"
+     - photo: "/images/team/"
 
 
   - name: "Maxime TIXHON"
