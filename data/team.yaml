@@ -46,7 +46,7 @@ postdocs:
   - name: "Gabriel CIA BERIAIN"
     role: "Postdoctoral Researcher"
     email: "gabriel.cia@ulb.be"
-    bio: "Antibody design"
+    bio: "My research is largely focused on immuno-informatics, especially all that relates to antibodies. My work includes the collection and curation of datasets, the development of predictive computational tools as well as their rigorous benchmarking. I'm currently mainly working on the development of tools to support the de novo design of antibodies, including a physics-based binding ddG prediction method, as well as a full de novo design pipeline leveraging fast protein structure prediction methods and large antibody sequence databases."
     photo: "/images/team/gabriel_cia.png"
     research_interests: []
     linkedin: "https://www.linkedin.com/in/gabriel-cia-decombis-136392139/"
