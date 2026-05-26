@@ -101,10 +101,12 @@ phd_students:
   - name: "Pauline HERMANS"
     role: "PhD Student"
     email: "pauline.hermans@ulb.be"
-    bio: ""
-    research_interests: []
-    linkedin: ""
-    orcid: ""
+    photo: "/images/team/pauline_hermans.jpeg"
+    bio: "I am a PhD candidate in computational and structural biology, working at the interface of bioinformatics, protein engineering, and mRNA vaccine development. My research combines machine learning and biophysical modeling approaches to better understand and predict the impact of mutations on proteins. In particular, I have developed and benchmarked machine learning models for predicting protein stability changes upon mutation (ΔΔG), contributing to the advancement of computational tools in protein design. I apply these models to guide the engineering of RNA polymerases, with the aim of improving in vitro transcription (IVT) processes and enhancing mRNA quality for vaccine applications."
+    research_interests: ["Protein engineering", "Machine learning", "Structural bioinformatics", "Mutational modeling", "mRNA technologies"]
+    linkedin: "https://www.linkedin.com/in/pauline-hermans/"
+    orcid: "https://orcid.org/0009-0008-9398-9992"
+    google_scholar: "https://scholar.google.com/citations?user=l_Bc0G8AAAAJ&hl=fr&inst=15752104956529846084"
 
   - name: "Tom KASSA"
     role: "PhD Student"
