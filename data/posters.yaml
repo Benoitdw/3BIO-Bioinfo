@@ -10,6 +10,14 @@ posters:
     event: "Televie 2026"
     pdf: "/posters/dewitte2026televie.pdf"
 
+posters:
+  - key: "mokhtari2025FAO"
+    title: "FAD: A One-Stop Database for Food Allergen Research and Information"
+    authors: "Mokhtarit Wafa, Khemili-Talbi Mouad, Kwasigroch Jean, and Gilis Dimitri"
+    year: 2025
+    event: "FAO Rome 2025"
+    pdf: "/posters/mokhtari2025FAO.pdf"
+
 # INSTRUCTIONS FOR ADDING NEW POSTERS:
 # 1. Copy the poster block above and fill in the fields
 # 2. Place the PDF file in static/posters/ (e.g. static/posters/pucci2024ismb.pdf)
