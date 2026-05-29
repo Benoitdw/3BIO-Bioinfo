@@ -121,7 +121,7 @@ phd_students:
     role: "PhD Student"
     email: "wafa.mokhtari@ulb.be"
     bio: ""
-    research_interests: []
+    research_interests: [fffff]
     linkedin: ""
     orcid: ""
 
