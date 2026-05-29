@@ -147,3 +147,19 @@ publications:
     thus providing mechanistic insight into why the variant leads to fitness loss or gain. We also provide an easy-to-use
     webserver at https://babylone.ulb.ac.be/FiTMuSiC, which is freely available for academic use and does not require any
     bioinformatics expertise, which simplifies the accessibility of our tool for the entire scientific community.'
+- key: mokhtari_fad_2026
+  title: 'FAD: a comprehensive database merging information about food allergens'
+  authors: Mokhtari W., Khemili-Talbi S., Kwasigroch J.M., Gilis D.
+  year: 2026
+  venue: Database (Oxford)
+  volume: '2026'
+  pages: 'baag028'
+  doi: 10.1093/database/baag028
+  pdf: '/publications/'
+  abstract: 'Food allergies represent a significant and growing global challenge. However, researchers and risk
+    assessors still lack a dedicated and comprehensive resource that centralizes food allergen information. As a
+    result, obtaining the necessary structural, biochemical, and immunological data often requires time-consuming
+    searches across multiple heterogeneous databases, hindering efficient analysis and slowing scientific progress.
+    The Food Allergen Database (FAD) merges biochemical, structural, immunological, and functional properties of
+    all known food allergens and isoallergens (1168 entries). It is an essential resource that facilitates the
+    extraction of all information about food allergens.'
